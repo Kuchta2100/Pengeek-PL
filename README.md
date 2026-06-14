@@ -6,12 +6,6 @@ W przypadku HyperOS 2 opartego na Androidzie 15. Użytkownicy LSPosed 2.0, prosi
 
  > Dzięki za świetny moduł [CustoMIUIzer](https://code.highspec.ru/Mikanoshi/CustoMIUIzer) od `Mikanoshi`
 
-### Wersje Legacy
-
-* [Wydanie HyperOS 1.0](https://github.com/MonwF/customiuizer/releases/tag/v24.10.12)
-* [Wydanie MIUI 14](https://github.com/MonwF/customiuizer/releases/tag/v23.11.26)
-* [Wydanie MIUI 13](https://github.com/MonwF/customiuizer/releases/tag/v23.08.26)
-
 ##  Tłumaczenia
 [![Crowdin](https://badges.crowdin.net/customiuizer14/localized.svg)](https://crowdin.com/project/customiuizer14)
 
@@ -20,7 +14,7 @@ W przypadku HyperOS 2 opartego na Androidzie 15. Użytkownicy LSPosed 2.0, prosi
 * [jiandaoyun](https://rz3kv5wa4g.jiandaoyun.com/dash/650e43a383027ec3225083e9)
 
 ### Przekaż darowiznę
-* [Inne](https://paypal.me/tpsxj)
+* [Inne]()
 
 ## Oto główne funkcje:
 * Utrzymywanie odblokowanego telefonu w zaufanym  Środowisko (Bluetooth i Wi-Fi)
