@@ -1,4 +1,4 @@
-name: Pengeek-PL-release
+name: Pengeek-PL
 
 on:
   workflow_dispatch:
