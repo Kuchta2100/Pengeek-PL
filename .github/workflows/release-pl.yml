@@ -36,7 +36,7 @@ jobs:
         echo releaseKeyAlias='${{ secrets.ALIAS }}' >> ../keystore.properties
         echo releaseKeyPassword='${{ secrets.KEY_PASSWORD }}' >> ../keystore.properties
         echo releaseStoreFile='key.jks' >> ../keystore.properties
-        echo ${{ secrets.SIGNING_KEY }} | base64 --decode > ../key.jks
+        echo ${{ secrets.SIGNING_KEY }} | base64 --decode > app/key.jks
         else
         touch ../keystore.properties
         fi
