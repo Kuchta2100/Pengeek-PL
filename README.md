@@ -1,57 +1,55 @@
 ## Pengeek
 
-**English** | [日本語](README_jp.md) | [Português (Brasil)](README_PT-BR.md) | [中文](README_zh.md)
+Dostosuj swój HyperOS do swoich upodobań.
 
-Customize your HyperOS to your liking.
+W przypadku HyperOS 2 opartego na Androidzie 15. Użytkownicy LSPosed 2.0, prosimy o pobranie wersji z rozszerzeniem „A101”.
 
-For `HyperOS 2` based on `Android 15`. LSPosed 2.0 users, please download the version with "A101".
+ > Dzięki za świetny moduł [CustoMIUIzer](https://code.highspec.ru/Mikanoshi/CustoMIUIzer) od `Mikanoshi`
 
-> Thanks for the awesome module [CustoMIUIzer](https://code.highspec.ru/Mikanoshi/CustoMIUIzer) from `Mikanoshi`
+### Wersje Legacy
 
-### Legacy releases
+* [Wydanie HyperOS 1.0](https://github.com/MonwF/customiuizer/releases/tag/v24.10.12)
+* [Wydanie MIUI 14](https://github.com/MonwF/customiuizer/releases/tag/v23.11.26)
+* [Wydanie MIUI 13](https://github.com/MonwF/customiuizer/releases/tag/v23.08.26)
 
-* [HyperOS 1.0 release](https://github.com/MonwF/customiuizer/releases/tag/v24.10.12)
-* [MIUI 14 release](https://github.com/MonwF/customiuizer/releases/tag/v23.11.26)
-* [MIUI 13 release](https://github.com/MonwF/customiuizer/releases/tag/v23.08.26)
-
-## Translations
+##  Tłumaczenia
 [![Crowdin](https://badges.crowdin.net/customiuizer14/localized.svg)](https://crowdin.com/project/customiuizer14)
 
-## Test builds
-* [Telegram channel](https://t.me/pengeek)
+## Wersje testowe
+* [Kanał Telegram](https://t.me/pengeek)
 * [jiandaoyun](https://rz3kv5wa4g.jiandaoyun.com/dash/650e43a383027ec3225083e9)
 
-### Donate
-Via paypal
-* [$5](https://paypal.me/tpsxj/5)
-* [$10](https://paypal.me/tpsxj/10)
-* [Other](https://paypal.me/tpsxj)
+### Przekaż darowiznę
+Przez PayPal
+* [5$](https://paypal.me/tpsxj/5)
+* [10$](https://paypal.me/tpsxj/10)
+* [Inne](https://paypal.me/tpsxj)
 
-## Here are the main working features:
-* Keep phone unlocked in a trusted environment (Bluetooth and Wi-Fi)
-* Autobrightness range limit
-* Extended timers for silent and dnd mode
-* Music visualizer
-* Set album art as wallpaper
-* Statusbar
-  * Hide icons
-  * Clock tweak
-  * Gesture (double tap to sleep, slice to adjust volume or brightness)
-  * Battery bar indicator
-* Notifications
-  * Notification importance
-  * Auto expand
-  * Extended menu
-  * Remove limit per package
-  * Open in floating window
-  * Open channel settings
-* Disable blacklist for floating windows
-* Extended power menu
-* Allow downgrade
-* Disable app signature verification
-* Use back gesture with navbar mode
-* Custom left/right buttons on the navbar
-* Skip permission intercept warning countdown
-* Control system apps to connect with Wi-Fi and battery saver
-* Show more detail on app installer or info activity
-* Powerful gesture with multi actions
+## Oto główne funkcje:
+* Utrzymywanie odblokowanego telefonu w zaufanym  Środowisko (Bluetooth i Wi-Fi)
+* Ograniczenie zakresu automatycznej jasności
+* Rozszerzone timery dla trybu cichego i trybu „nie przeszkadzać”
+* Wizualizator muzyki
+* Ustawienie okładki albumu jako tapety
+* Pasek stanu
+* Ukrycie ikon
+* Modyfikacja zegara
+* Gest (dwukrotne dotknięcie w celu uśpienia, pocięcie w celu dostosowania głośności lub jasności)
+* Wskaźnik poziomu naładowania baterii
+* Powiadomienia
+* Ważność powiadomień
+* Automatyczne rozwijanie
+* Rozszerzone menu
+* Zniesienie limitu na pakiet
+* Otwieranie w oknie ruchomym
+* Otwieranie ustawień kanału
+* Wyłącz czarną listę dla okien ruchomych
+* Rozszerzone menu zasilania
+* Zezwalanie na obniżenie wersji
+* Wyłącz weryfikację podpisu aplikacji
+* Używanie gestu „wstecz” w trybie paska nawigacyjnego
+* Niestandardowe przyciski lewy/prawy na pasku nawigacyjnym
+* Pomijanie odliczania ostrzeżenia o przechwyceniu uprawnień
+* Sterowanie aplikacjami systemowymi w celu połączenia z Wi-Fi i oszczędzania baterii
+* Wyświetlanie szczegółowych informacji o instalatorze aplikacji lub aktywności informacyjnej
+* Zaawansowany gest z wieloma akcjami
