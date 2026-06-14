@@ -13,7 +13,7 @@ def lastVersionName = "25.09.25"
 
 android {
     namespace "name.monwf.customiuizer"
-    compileSdk 35
+    compileSdk 36
 
     signingConfigs {
         v2 {
@@ -27,9 +27,9 @@ android {
     }
     defaultConfig {
         applicationId "name.monwf.customiuizer"
-        minSdkVersion 35
+        minSdkVersion 36
         //noinspection OldTargetApi,ExpiredTargetSdkVersion
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode lastVersion
         versionName lastVersionName
         resConfigs 'ru-rRU', 'zh-rCN', 'ja-rJP', 'vi-rVN', 'cs-rCZ', 'pt-rBR', 'tr-rTR', 'es-rES'
