@@ -1,5 +1,7 @@
 ## Pengeek
 
+Mój fork dodaje język polski do oryginalnego projektu.
+
 Dostosuj swój HyperOS do swoich upodobań.
 
 ## Wersje testowe
