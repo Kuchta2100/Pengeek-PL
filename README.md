@@ -2,10 +2,6 @@
 
 Dostosuj swój HyperOS do swoich upodobań.
 
-W przypadku HyperOS 2 opartego na Androidzie 15. Użytkownicy LSPosed 2.0, prosimy o pobranie wersji z rozszerzeniem „A101”.
-
- > Dzięki za świetny moduł [CustoMIUIzer](https://code.highspec.ru/Mikanoshi/CustoMIUIzer) od `Mikanoshi`
-
 ##  Tłumaczenia
 [![Crowdin](https://badges.crowdin.net/customiuizer14/localized.svg)](https://crowdin.com/project/customiuizer14)
 
