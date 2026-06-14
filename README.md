@@ -2,9 +2,6 @@
 
 Dostosuj swój HyperOS do swoich upodobań.
 
-##  Tłumaczenia
-[![Crowdin](https://badges.crowdin.net/customiuizer14/localized.svg)](https://crowdin.com/project/customiuizer14)
-
 ## Wersje testowe
 * [Kanał Telegram](https://t.me/pengeek)
 * [jiandaoyun](https://rz3kv5wa4g.jiandaoyun.com/dash/650e43a383027ec3225083e9)
