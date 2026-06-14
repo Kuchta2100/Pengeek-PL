@@ -1,3 +1,4 @@
+
 name: Pengeek-PL
 
 on:
@@ -74,8 +75,4 @@ jobs:
       if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/PL' || github.event_name == 'workflow_dispatch')
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "app/build/outputs/apk/release/Pengeek-PL-release.apk,app/build/outputs/apk/debug/Pengeek-PL-debug.apk"
-        tag: "26"
-        name: "Pengeek-PL"
-        allowUpdates: "true"
-        token: "${{ secrets.GITHUB_TOKEN }}"
+        artifacts: "app/build/outputs/apk/release/Pengeek-PL-release.apk
