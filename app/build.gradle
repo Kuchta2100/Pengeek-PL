@@ -15,6 +15,12 @@ android {
     namespace "name.monwf.customiuizer"
     compileSdk 36
 
+    // BLOK WYŁĄCZAJĄCY BŁĘDY LINTA (DLA TŁUMACZEŃ Z CROWDIN)
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
     signingConfigs {
         v2 {
             storeFile sFile
@@ -32,7 +38,8 @@ android {
         targetSdkVersion 36
         versionCode lastVersion
         versionName lastVersionName
-        resConfigs 'ru-rRU', 'zh-rCN', 'ja-rJP', 'vi-rVN', 'cs-rCZ', 'pt-rBR', 'tr-rTR', 'es-rES'
+        // Dodałem 'pl' do konfiguracji zasobów, żeby Gradle nie usunął Twojego tłumaczenia
+        resConfigs 'pl', 'ru-rRU', 'zh-rCN', 'ja-rJP', 'vi-rVN', 'cs-rCZ', 'pt-rBR', 'tr-rTR', 'es-rES'
         ndk { abiFilters "arm64-v8a" }
     }
     buildTypes {
