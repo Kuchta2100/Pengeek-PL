@@ -1,3 +1,4 @@
+
 name: Pengeek-PL
 
 on:
@@ -34,7 +35,15 @@ jobs:
         echo releaseKeyAlias='${{ secrets.ALIAS }}' >> ../keystore.properties
         echo releaseKeyPassword='${{ secrets.KEY_PASSWORD }}' >> ../keystore.properties
         echo releaseStoreFile='key.jks' >> ../keystore.properties
-        echo "${{ secrets.SIGNING_KEY }}" | base64 --decode > app/key.jks
+        
+        # Dekodujemy klucz z Twoich Secrets do pliku tymczasowego
+        echo "${{ secrets.SIGNING_KEY }}" | base64 --decode > app/key_temp.jks
+        
+        # TA LINIJKA AUTOMATYCZNIE NAPRAWIA FORMAT KLUCZA NA SERWERZE:
+        keytool -importkeystore -srckeystore app/key_temp.jks -destkeystore app/key.jks -deststoretype JKS -srcstorepass '${{ secrets.KEY_STORE_PASSWORD }}' -deststorepass '${{ secrets.KEY_STORE_PASSWORD }}' -noprompt
+        
+        # Usuwamy plik tymczasowy
+        rm app/key_temp.jks
 
     - name: Accept Android SDK licenses
       run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
