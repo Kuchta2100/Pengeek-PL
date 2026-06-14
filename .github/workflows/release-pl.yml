@@ -1,4 +1,3 @@
-
 name: Pengeek-PL
 
 on:
@@ -33,13 +32,13 @@ jobs:
       if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/PL' || github.event_name == 'workflow_dispatch')
       run: |
         if [ ! -z "${{ secrets.SIGNING_KEY }}" ]; then
-        echo releaseStorePassword='${{ secrets.KEY_STORE_PASSWORD }}' >> keystore.properties
-        echo releaseKeyAlias='${{ secrets.ALIAS }}' >> keystore.properties
-        echo releaseKeyPassword='${{ secrets.KEY_PASSWORD }}' >> keystore.properties
-        echo releaseStoreFile='key.jks' >> keystore.properties
-        echo ${{ secrets.SIGNING_KEY }} | base64 --decode > key.jks
+        echo releaseStorePassword='${{ secrets.KEY_STORE_PASSWORD }}' >> ../keystore.properties
+        echo releaseKeyAlias='${{ secrets.ALIAS }}' >> ../keystore.properties
+        echo releaseKeyPassword='${{ secrets.KEY_PASSWORD }}' >> ../keystore.properties
+        echo releaseStoreFile='key.jks' >> ../keystore.properties
+        echo ${{ secrets.SIGNING_KEY }} | base64 --decode > ../key.jks
         else
-        touch keystore.properties
+        touch ../keystore.properties
         fi
 
     - name: Accept Android SDK licenses
