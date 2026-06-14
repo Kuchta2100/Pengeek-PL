@@ -1,3 +1,4 @@
+
 name: Pengeek-PL
 
 on:
@@ -42,7 +43,7 @@ jobs:
         fi
 
     - name: Accept Android SDK licenses
-      run: yes | sdkmanager --licenses
+      run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
     - name: Patch Ninja for C++20 Modules
       run: |
