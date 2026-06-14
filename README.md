@@ -20,9 +20,6 @@ W przypadku HyperOS 2 opartego na Androidzie 15. Użytkownicy LSPosed 2.0, prosi
 * [jiandaoyun](https://rz3kv5wa4g.jiandaoyun.com/dash/650e43a383027ec3225083e9)
 
 ### Przekaż darowiznę
-Przez PayPal
-* [5$](https://paypal.me/tpsxj/5)
-* [10$](https://paypal.me/tpsxj/10)
 * [Inne](https://paypal.me/tpsxj)
 
 ## Oto główne funkcje:
