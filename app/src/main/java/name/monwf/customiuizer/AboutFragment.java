@@ -62,7 +62,7 @@ public class AboutFragment extends SubFragment {
 			}
 		});
 
-		String[] locales = new String[] { "zh-CN", "ru-RU", "ja-JP", "vi-VN", "cs-CZ", "pt-BR", "tr-TR", "es-ES", "pl-PL" };
+String[] locales = new String[] { "cs-CZ", "es-ES", "ja-JP", "pl-PL", "pt-BR", "ru-RU", "tr-TR", "vi-VN", "zh-CN" };
 
 		ArrayList<String> localesArr = new ArrayList<String>(Arrays.asList(locales));
 		ArrayList<SpannableString> localeNames = new ArrayList<SpannableString>();
