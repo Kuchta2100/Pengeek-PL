@@ -300,7 +300,7 @@ public class MainFragment extends PreferenceFragmentBase {
 			@Override
 			public boolean onPreferenceClick(Preference pref) {
 				if (!config.getLocales().get(0).getCountry().equals("CN")) {
-					Helpers.openURL(act, "pomagam.pl/ahkhwy");
+					Helpers.openURL(act, "https://pomagam.pl/ahkhwy");
 				}
 				else {
 					openSubFragment(new SubFragment(), null, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, pref.getTitle().toString(), R.layout.fragment_donate);
