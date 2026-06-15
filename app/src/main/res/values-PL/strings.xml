@@ -623,7 +623,7 @@
   <string name="gboard">Klawiatura Google</string>
   <string name="calls">Połączenia</string>
   <string name="settings">Ustawienia</string>
-  <string name="array_default">Domyślne</string>
+  <string name="array_default">Domyślnie</string>
   <string name="array_allow">Zezwól</string>
   <string name="array_deny">Odmów</string>
   <string name="array_system_default">Systemowe</string>
