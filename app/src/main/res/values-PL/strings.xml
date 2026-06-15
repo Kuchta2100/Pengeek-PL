@@ -108,14 +108,14 @@
 \nMM - dwucyfrowy miesiąc (06、26)
 \nM - jednocyfrowy miesiąc (6、26)
 \nDD - dwucyfrowy dzień (06、26)
-\nD -  jednocyfrowy dzień (6、26)
+\nD - jednocyfrowy dzień (6、26)
 \nE - krótki tydzień (niedz.)
 \nA - AM、PM
 \nAA - Rano, Południe, Wieczór
-\nGG - 24-godzinna godzina dwucyfrowa (09、14)
-\nG - 24-godzinna godzina jednocyfrowa (9、14)
-\nGG - 12-godzinna godzina dwucyfrowa (09、02)
-\nG - 12-godzinna godzina jednocyfrowa (9、2)
+\nGG - 24-godzinna godzina dwucyfrowa (08、00)
+\nG - 24-godzinna godzina jednocyfrowa (8、00)
+\nGG - 12-godzinna godzina dwucyfrowa (08、00)
+\nG - 12-godzinna godzina jednocyfrowa (8、0)
  \nMM - dwucyfrowa minuta (09)
 \nSS - dwucyfrowa sekunda (09)</string>
   <string name="system_clock_dualrow_title">Pokaż w dwóch rzędach</string>
