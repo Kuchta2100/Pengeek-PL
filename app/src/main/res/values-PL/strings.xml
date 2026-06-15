@@ -547,7 +547,7 @@
   <string name="controls_navbarright_summ">Działanie po naciśnięciu prawego dodatkowego przycisku nawigacyjnego</string>
   <string name="controls_navbarright_title">Działanie prawego przycisku</string>
   <string name="controls_navbarrightlong_summ">Działanie na prawym dodatkowym przycisku nawigacyjnym - naciśnij i przytrzymaj</string>
-  <string name="controls_navbarrightlong_title">Naciśnięcie i przytrzymanie prawego przycisku</string>
+  <string name="controls_navbarrightlong_title">Naciśnij i przytrzymaj prawu przycisk</string>
   <string name="controls_navbarmargin_title">Dodatkowy margines</string>
   <string name="controls_navbarmargin_summ">Zwiększ odległość od krawędzi ekranu, aby umożliwić dostęp do dodatkowych przycisków</string>
   <string name="controls_navbar_noaction">Brak zdefiniowanego działania</string>
@@ -831,9 +831,9 @@
   <string name="support_repo_title">Katalog CustoMIUIzer Mikanoshi</string>
   <string name="support_repo_summ">Katalog Github ze źródłami modułów i dystrybucjami</string>
   <string name="support_donate">Wesprzyj $%1$d</string>
-  <string name="support_donate_me_title">Wesprzyj przez zbiórkę charytatywną</string>
+  <string name="support_donate_me_title">Wsparcie</string>
   <string name="support_donate_title">Wesprzyj mnie</string>
-  <string name="support_donate_other_summ" translatable="false">Zbiórka charytatywna</string>
+  <string name="support_donate_other_summ" translatable="true">Wsparcie</string>
   <string name="array_color_auto">Automatycznie</string>
   <string name="array_color_dark">Ciemny</string>
   <string name="array_color_light">Jasny</string>
