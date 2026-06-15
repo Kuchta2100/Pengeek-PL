@@ -55,9 +55,9 @@ public class AboutFragment extends SubFragment {
 			@Override
 			public boolean onPreferenceClick(Preference pref) {
 				if (isLangRu)
-					Helpers.openURL(act, "https://mikanoshi.name/donate/");
+					Helpers.openURL(act, "pomagam.pl/ahkhwy");
 				else
-					Helpers.openURL(act, "https://en.mikanoshi.name/donate/");
+					Helpers.openURL(act, "pomagam.pl/ahkhwy");
 				return true;
 			}
 		});
