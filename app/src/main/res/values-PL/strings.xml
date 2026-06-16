@@ -24,7 +24,7 @@
   <string name="system_mods_screen_rotation">Obracanie</string>
   <string name="system_mods_screen_backlight">Podświetlenie</string>
   <string name="system_mods_audio">Dzwięk</string>
-  <string name="system_mods_vibration">Wibracja</string>
+  <string name="system_mods_vibration">Wibracje</string>
   <string name="system_mods_toasts">Dymki powiadomień</string>
   <string name="system_statusbaricons_title">Ukryj ikony</string>
   <string name="system_statusbaricons_summ">Zarządzaj widocznością ikon paska stanu</string>
@@ -250,7 +250,7 @@
   <string name="system_volume">Dźwięki systemowe</string>
   <string name="system_scramblepin_title">Wymieszaj PIN</string>
   <string name="system_scramblepin_summ">Zmień losowo kolejność przycisków PIN</string>
-  <string name="system_securelock_title">Rozszerzony ekran blokady</string>
+  <string name="system_securelock_title">Ulepszony ekran blokady</string>
   <string name="system_securelock_summ">Wyłącz menu zasilania, gdy ekran blokady jest aktywny</string>
   <string name="system_secureqs_title">Bezpieczne szybkie ustawienia</string>
   <string name="system_secureqs_summ">Wyłącz kafelki wrażliwe na bezpieczeństwo, gdy ekran blokady jest aktywny</string>
@@ -416,7 +416,7 @@
   <string name="system_qs_hideoperator_title">Ukryj nazwę operatora</string>
   <string name="system_qs_hideoperator_delimiter_title">Ukryj separator pomiędzy nazwą operatora</string>
   <string name="system_qshaptic_title">Szybkie ustawienia wibracji systemowej</string>
-  <string name="system_qshaptic_summ">Wibracja po naciśnięciu kafelka szybkich ustawień</string>
+  <string name="system_qshaptic_summ">Wibruj po naciśnięciu kafelka szybkich ustawień</string>
   <string name="system_mods_other">Inne</string>
   <string name="system_mods_volumeblur">Rozmyj tło okna dialogowego głośności</string>
   <string name="system_volumeblur_collapsed_title">Zwinięte okno dialogowe</string>
@@ -513,7 +513,7 @@
   <string name="controls_fingerprintscreen_title">Włącz ekran po niepowodzeniu</string>
   <string name="controls_fingerprintscreen_summ">Rozjaśnij ekran po nieudanej autoryzacji</string>
   <string name="controls_fingerprintsuccess_title">Wibruj po powodzeniu</string>
-  <string name="controls_fingerprintsuccess_summ">Wibracja po udanej autoryzacji</string>
+  <string name="controls_fingerprintsuccess_summ">Wibruj po udanej autoryzacji</string>
   <string name="controls_fingerprintsuccess_ignore_title">Ignoruj ustawienia systemowe</string>
   <string name="controls_fingerprintsuccess_ignore_summ">Nie wyłączaj wibracji dotykowej, gdy wyłączone są wibracje przy naciśnięciu</string>
   <string name="controls_fingerprintfailure_title">Nie wibruj po niepowodzeniu</string>
@@ -680,8 +680,8 @@
   <string name="array_screenlock_noreq">Nie wymagaj</string>
   <string name="array_screenlock_weak">Słabe (odcisk palca)</string>
   <string name="array_screenlock_strong">Silne (PIN/hasło/wzór)</string>
-  <string name="array_noblur">Bez rozmycia</string>
-  <string name="array_netspeedicons_no">Bez ikony</string>
+  <string name="array_noblur">Nie rozmywaj</string>
+  <string name="array_netspeedicons_no">Nie pokazuj ikony</string>
   <string name="array_netspeedicons_arrows" translatable="false">△▲▽▼</string>
   <string name="array_netspeedicons_bullets" translatable="false">☖ ☗ ⛉ ⛊</string>
   <string name="array_expandnotifs_allbutblack">Dla wszystkich aplikacji oprócz wymienionych</string>
@@ -690,8 +690,8 @@
   <string name="system_statusbar_mobile_digital_signal_in2rows_title">Wyświetl jako dwa rzędy, gdy telefon ma dwie karty SIM</string>
   <string name="system_statusbar_mobiletype_show_wificonnected_title">Pokaż, kiedy Wi-Fi jest połączone</string>
   <string name="array_mobiletypeicon_hide">Ukryj całkowicie</string>
-  <string name="array_qshaptic_light">Lekka wibracja</string>
-  <string name="array_qshaptic_strong">Mocna wibracja</string>
+  <string name="array_qshaptic_light">Lekkie wibracje</string>
+  <string name="array_qshaptic_strong">Mocne wibracje</string>
   <string name="array_enable">Włącz</string>
   <string name="array_disable">Wyłącz</string>
   <string name="array_top">Bliżej góry</string>
@@ -822,7 +822,7 @@
   <string name="miuizer_locale_title">Język interfejsu</string>
   <string name="miuizer_locale_summ">Zawsze wyświetlaj interfejs modułu w wybranym języku</string>
   <string name="troubleshoot">Rozwiązywanie problemów</string>
-  <string name="support">Wsparcie</string>
+  <string name="support">Wsparcie i pomoc</string>
   <string name="support_github">Kod i problemy</string>
   <string name="support_github_summ">Oznacz katalog gwiazdką, aby utrzymywać aplikację w aktualnej wersji</string>
   <string name="support_contact_title">Kontakt ze mną</string>
@@ -833,7 +833,7 @@
   <string name="support_donate">Wesprzyj $%1$d</string>
   <string name="support_donate_me_title">Wsparcie</string>
   <string name="support_donate_title">Wesprzyj mnie</string>
-  <string name="support_donate_other_summ" translatable="true">Wsparcie</string>
+  <string name="support_donate_other_summ" translatable="true">Wsparcie poprzez pomagam.pl</string>
   <string name="array_color_auto">Automatycznie</string>
   <string name="array_color_dark">Ciemny</string>
   <string name="array_color_light">Jasny</string>
