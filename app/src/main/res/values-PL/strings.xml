@@ -100,7 +100,7 @@
   <string name="system_statusbar_clock_chip_verticalpadding_title">Wypełnienie pionowe</string>
   <string name="system_clock_time_format_title">Ustaw 24-godzinny format czasu</string>
   <string name="system_clock_leadingzero_title">Pokaż wiodące zero dla godzin</string>
-  <string name="system_clock_customformat_enable_title">Włącz niestandardowy format </string>
+  <string name="system_clock_customformat_enable_title">Włącz niestandardowy format</string>
   <string name="system_clock_customformat_setting_title">Ustaw format</string>
   <string name="system_clock_customformat_help_summ">Możesz wprowadzić nową linię, treść po 2 liniach zostanie obcięta.
 \nyyyy - czterocyfrowy rok (2026)
@@ -333,7 +333,7 @@
   <string name="system_removesecure_summ">Zezwalaj na zrzut ekranu i nagrywanie wideo dowolnej aplikacji</string>
   <string name="system_hidelowbatwarn_title">Ukryj ostrzeżenie o niskim poziomie baterii</string>
   <string name="system_hidelowbatwarn_summ">Nie wyświetlaj okna dialogowego z ostrzeżeniem, które prosi o włączenie funkcji oszczędzania baterii</string>
-  <string name="system_hideproxywarn_title">Ukryj ostrzeżenie o wyłączonych naciśnięciach</string>
+  <string name="system_hideproxywarn_title">Ukryj ostrzeżenie o przypadkowych dotknięciach</string>
   <string name="system_hideproxywarn_summ">Nie wyświetlaj ostrzeżenia o zakryciu górnej części ekranu</string>
   <string name="system_cleanshare_title">Wyczyść menu udostępniania</string>
   <string name="system_cleanshare_summ">Usuń wybrane aplikacje z menu udostępniania</string>
@@ -526,9 +526,9 @@
   <string name="controls_volumecursor_reverse_summ">Zamień kierunki ruchów kursora</string>
   <string name="controls_volumedowndt_turnon_torch_title">Naciśnij dwukrotnie przycisk zmniejszania głośności, aby włączyć latarkę</string>
   <string name="controls_mediaplayer_apps_title">Aplikacje odtwarzacza multimedialnego (najpierw dodaj do zakresu Vector)</string>
-  <string name="controls_volumemedia_up_title">Przytrzymaj przycisk zwiększania głośności</string>
+  <string name="controls_volumemedia_up_title">Naciśnij i przytrzymaj przycisk\nzwiększania głośności</string>
   <string name="controls_volumemedia_up_summ">Działanie dotyczące naciśnięcia i przytrzymania przycisku zwiększania głośności przy wyłączonym ekranie</string>
-  <string name="controls_volumemedia_down_title">Przytrzymaj przycisk zmniejszania głośności</string>
+  <string name="controls_volumemedia_down_title">Naciśnij i przytrzymaj przycisk\nzmniejszania głośności</string>
   <string name="controls_volumemedia_down_summ">Działanie dotyczące naciśnięcia i przytrzymania przycisku zmniejszania głośności przy wyłączonym ekranie</string>
   <string name="controls_volumemedia_vibrate_title">Wibruj przy naciśnięciu i przytrzymaniu</string>
   <string name="controls_volumemedia_vibrate_summ">Wibracja po naciśnięciu i przytrzymaniu</string>
