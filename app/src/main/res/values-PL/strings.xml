@@ -191,7 +191,7 @@
   <string name="system_toasttime_summ">Zmień zarówno krótkie, jak i długie okresy trwania</string>
   <string name="system_toasttime_note">Wynikowy czas trwania nie będzie krótszy niż 1 sekunda</string>
   <string name="system_betterpopups_disablewhenmute_title">Wyłącz powiadomienia, jeśli dźwięk jest wyciszony</string>
-  <string name="system_mutevisiblenotif_title">Wycisz, jeśli widoczne</string>
+  <string name="system_mutevisiblenotif_title">Wycisz, jeśli powiadomienie jest widoczne</string>
   <string name="system_mutevisiblenotif_summ">Nie odtwarzaj dźwięku powiadomienia, jeśli ekran jest włączony</string>
   <string name="system_popupnotif_apps_title">Wybrane aplikacje</string>
   <string name="system_mods_screenshots">Zrzuty ekranu</string>
