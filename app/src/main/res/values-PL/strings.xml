@@ -88,7 +88,7 @@
   <string name="system_clock_app_summ">Otwórz wybraną aplikację po naciśnięciu zegara w nagłówku szuflady powiadomień</string>
   <string name="system_calendar_app_title">Aplikacja kalendarza</string>
   <string name="system_calendar_app_summ">Otwórz wybraną aplikację po naciśnięciu daty w nagłówku szuflady powiadomień</string>
-  <string name="system_clockseconds_title">Pokaż sekundy</string>
+  <string name="system_clockseconds_title">Pokaż sekundy w zegarze</string>
   <string name="system_cc_hidedate_title">Ukryj datę</string>
   <string name="system_clock_show_ampm_title">Pokaż AM|PM</string>
   <string name="system_statusbar_clock_chip_title">Pokaż kolorowe tło za zegarem</string>
@@ -321,7 +321,7 @@
   <string name="system_epm_action_fastboot_confirm_title">Zrestartuj do trybu fastboot</string>
   <string name="system_epm_action_recovery_title">Odzyskiwanie</string>
   <string name="system_epm_action_recovery_confirm_title">Zrestartuj do trybu odzyskiwania</string>
-  <string name="system_downgrade_title">Zezwól na obniżenie wersji</string>
+  <string name="system_downgrade_title">Zezwól na obniżenie wersji aplikacji</string>
   <string name="system_downgrade_summ">Zezwól na instalację starszej wersji aplikacji na nowszej</string>
   <string name="system_apksign_title">Wyłącz weryfikację podpisu</string>
   <string name="system_disableintegrity_title">Wyłącz weryfikację integralności systemu</string>
@@ -389,16 +389,16 @@
   <string name="system_hidefromrecents_summ">Ukryj wybrane aplikacje z listy ostatnich zadań</string>
   <string name="system_mods_betterpopups">Wyskakujące okna powiadomień</string>
   <string name="system_betterpopups_autoclose_expanded_title">Automatycznie zamykaj rozwinięte wyskakujące okienka</string>
-  <string name="system_betterpopups_allowfloat_title">Zezwól na okno pływające</string>
+  <string name="system_betterpopups_allowfloat_title">Zezwól na pływające okno</string>
   <string name="system_betterpopups_allowfloat_summ">Otwórz aplikację w pływającym oknie po przesunięciu palcem w dół, jeśli powiadomienie ma zdefiniowane odpowiednie działanie naciśnięcia</string>
-  <string name="system_betterpopups_center_title">Pokaż wyśrodkowane</string>
+  <string name="system_betterpopups_center_title">Wyśrodkuj datę</string>
   <string name="system_betterpopups_center_summ">Wyświetlaj wyskakujące okienka na środku ekranu</string>
   <string name="system_betterpopups_position_at_top_title">Wyświetlaj wyskakujące okienka u góry</string>
   <string name="system_mods_floatingwindows">Pływające okna i podzielony ekran</string>
   <string name="system_fw_noblacklist_title">Wyłącz czarną listę</string>
   <string name="system_fw_noblacklist_summ">Zezwól na otwieranie dowolnej aplikacji w pływającym oknie</string>
   <string name="system_fw_splitscreen_title">Tryb wielu okien</string>
-  <string name="system_fw_splitscreen_summ">Zezwól na jednoczesne korzystanie z podzielonego ekranu i okien ruchomych, wyłącz listę zaległych dla podzielonego ekranu</string>
+  <string name="system_fw_splitscreen_summ">Zezwól na jednoczesne korzystanie z podzielonego ekranu i pływających okien, wyłącz listę zaległych dla podzielonego ekranu</string>
   <string name="system_fw_forcein_actionsend_title">Otwórz w pływającym oknie podczas udostępniania</string>
   <string name="system_mods_applock">Blokada aplikacji</string>
   <string name="system_applock_title">Mniej rygorystyczna blokada aplikacji</string>
