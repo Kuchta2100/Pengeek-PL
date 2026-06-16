@@ -815,8 +815,8 @@
   <string name="miuizer_show_newmods_title">Oznacz nowe modyfikacje</string>
   <string name="miuizer_show_newmods_summ">Wyświetl etykietę &#x201E;Nowość!&#x201D; w tytule modyfikacji dodanych w bieżącej wersji</string>
   <string name="miuizer_new_mod">Nowość!</string>
-  <string name="miuizer_show_launchericon_title">Ikona launchera</string>
-  <string name="miuizer_show_launchericon_summ">Pokaż ikonę w launcherze</string>
+  <string name="miuizer_show_launchericon_title">Ikona w szufladzie aplikacji</string>
+  <string name="miuizer_show_launchericon_summ">Pokaż ikonę Pengeek w szufladzie aplikacji</string>
   <string name="miuizer_show_settingsicon_title">Ikona szybkiego dostępu</string>
   <string name="miuizer_show_settingsicon_summ">Pokaż ikonę w Ustawieniach</string>
   <string name="miuizer_locale_title">Język interfejsu</string>
