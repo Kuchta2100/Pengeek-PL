@@ -29,7 +29,7 @@
   <string name="system_statusbaricons_title">Ukryj ikony</string>
   <string name="system_statusbaricons_summ">Zarządzaj widocznością ikon paska stanu</string>
   <string name="system_statusbaricons_wifistandard_title">Pokaż standard Wi-Fi</string>
-  <string name="system_statusbaricons_battery1_title">Obraz baterii</string>
+  <string name="system_statusbaricons_battery1_title">Ikona baterii</string>
   <string name="system_statusbaricons_battery4_title">Wskaźnik procentowy baterii</string>
   <string name="system_statusbaricons_battery3_title">Wskaźnik ładowania</string>
   <string name="system_statusbaricons_battery2_title">Procent baterii jest ukryty na pasku stanu, ale pojawia się w centrum sterowania</string>
@@ -69,7 +69,7 @@
   <string name="system_batteryindicator_rounded_title">Zaokrąglone końce</string>
   <string name="system_batteryindicator_centered_title">Wyśrodkuj</string>
   <string name="system_batteryindicator_height_title">Wysokość paska</string>
-  <string name="system_batteryindicator_padding_title">Wypełnij w poziome</string>
+  <string name="system_batteryindicator_padding_title">Wypełnienie poziomie</string>
   <string name="system_batteryindicator_colorval1_title">Kolor pełnego naładowania</string>
   <string name="system_batteryindicator_colorval2_title">Kolor niskiego naładowania</string>
   <string name="system_batteryindicator_colorval3_title">Kolor oszczędzania baterii</string>
@@ -97,7 +97,7 @@
   <string name="system_statusbar_clock_chip_endcolor_title">Kolor końcowy</string>
   <string name="system_statusbar_clock_chip_customtextcolor_title">Niestandardowy kolor tekstu</string>
   <string name="system_statusbar_clock_chip_orientation_vertical_title">Rysuj gradient od góry do dołu</string>
-  <string name="system_statusbar_clock_chip_verticalpadding_title">Wypełnij w pionie</string>
+  <string name="system_statusbar_clock_chip_verticalpadding_title">Wypełnienie pionowe</string>
   <string name="system_clock_time_format_title">Ustaw 24-godzinny format czasu</string>
   <string name="system_clock_leadingzero_title">Pokaż wiodące zero dla godzin</string>
   <string name="system_clock_customformat_enable_title">Włącz niestandardowy format </string>
@@ -105,10 +105,10 @@
   <string name="system_clock_customformat_help_summ">Możesz wprowadzić nową linię, treść po 2 liniach zostanie obcięta.
 \nyyyy - czterocyfrowy rok (2026)
 \nyy - dwucyfrowy rok (26)
-\nMM - dwucyfrowy miesiąc (16, 06)
-\nM - jednocyfrowy miesiąc (16, 6)
-\ndd - dwucyfrowy dzień (16, 6)
-\nd - jednocyfrowy dzień (16, 6)
+\nMM - dwucyfrowy miesiąc (06)
+\nM - jednocyfrowy miesiąc (6)
+\ndd - dwucyfrowy dzień (16)
+\nd - jednocyfrowy dzień (16)
 \nE - dzień tygodnia w skrócie (niedz.)
 \na - AM, PM
 \naa - Rano, Południe, Wieczór
@@ -121,7 +121,7 @@
   <string name="system_clock_dualrow_title">Pokaż w dwóch rzędach</string>
   <string name="system_clock_fixedwidth_title">Ustaw stałą szerokość tekstu, aby zapobiec przesunięciom w poziomie</string>
   <string name="system_clock_fixedwidth_summ">Dostosuj szerokość wyświetlania sekund</string>
-  <string name="system_statusbar_clock_align_title">Wyrównaj w poziome</string>
+  <string name="system_statusbar_clock_align_title">Wyrównanie poziome</string>
   <string name="system_clockseconds_summ">Wyświetl sekundy na pasku stanu zegara</string>
   <string name="system_maxsbicons_title">Limit ikon powiadomień</string>
   <string name="system_maxsbicons_summ">Ustaw liczbę ikon powiadomień do wyświetlenia przed ich zamianą na kropki</string>
@@ -145,7 +145,7 @@
   <string name="system_netspeed_fontsize_title">Rozmiar czcionki prędkości sieci</string>
   <string name="system_netspeed_use_clock_style_title">Zachowaj styl tekstu spójny ze stylem zegara</string>
   <string name="system_statusbarcontrols_title">Sterowanie gestami</string>
-  <string name="system_statusbarcontrols_summ">Wykonaj wybrane działania na slajdzie i naciśnij dwukrotnie</string>
+  <string name="system_statusbarcontrols_summ">Wykonaj wybrane działania na przesunięciu i dwukrotnym naciśnięciu</string>
   <string name="system_statusbarcontrols_sens_title">Regulacja czułości</string>
   <string name="system_statusbarcontrols_sens_bright_title">Jasność</string>
   <string name="system_statusbarcontrols_sens_vol_title">Głośność</string>
@@ -154,10 +154,10 @@
   <string name="system_statusbarcontrols_dt_left_title">Naciśnij dwukrotnie lewy róg</string>
   <string name="system_statusbarcontrols_dt_right_title">Naciśnij dwukrotnie prawy róg</string>
   <string name="system_notifimportance_title">Pokaż ważność powiadomienia</string>
-  <string name="system_notif_disable_fold_title">Wyłącz powiadomienia o składaniu</string>
+  <string name="system_notif_disable_fold_title">Wyłącz zwijanie powiadomień</string>
   <string name="system_notif_disable_strong_toast_title">Wyłącz powiadomienia urządzenia</string>
   <string name="system_notif_disable_strong_toast_summ">Wyłącz w następujących scenariuszach</string>
-  <string name="system_notif_strong_toast_width_title">Powiadomienia urządzenia z</string>
+  <string name="system_notif_strong_toast_width_title">Szerokość powiadomień urządzenia</string>
   <string name="system_morenotif_title">Usuń limit liczby powiadomień dla każdej aplikacji</string>
   <string name="system_colorizenotiftitle_title">Kolorowa karta powiadomień</string>
   <string name="system_colorizenotiftitle_summ">Zastosuj kolor ikony do karty</string>
@@ -202,7 +202,7 @@
   <string name="system_screenshot_overlay_title">Ukryj nakładki na zrzutach ekranu</string>
   <string name="system_screenshot_overlay_summ">Tymczasowo ukryj nakładki podczas robienia zrzutu ekranu</string>
   <string name="system_chargeanimtime_title">Ustaw czas wygaszania ekranu podczas animacji ładowania</string>
-  <string name="system_chargeanimtime_summ">Jak długo ekran powinien być włączony po rozpoczęciu animacji ładowania</string>
+  <string name="system_chargeanimtime_summ">Ustaw jak długo ekran powinien być włączony po rozpoczęciu animacji ładowania</string>
   <string name="system_nolightuponcharges_title">Nie podświetlaj ekranu podczas ładowania</string>
   <string name="system_nolightuponcharges_summ">Nie włączaj ekranu podczas podłączania lub odłączania ładowarki</string>
   <string name="system_nolightuponheadset_title">Nie podświetlaj ekranu po podłączeniu zestawu słuchawkowego</string>
@@ -213,8 +213,8 @@
   <string name="system_autobrightness_reset_when_screenoff_title">Włącz funkcję automatycznej regulacji jasności po wyłączeniu ekranu</string>
   <string name="system_autobrightness_title">Ustaw zakres automatycznej jasności</string>
   <string name="system_autobrightness_summ">Ustaw minimalne i maksymalne wartości automatycznej jasności</string>
-  <string name="system_minbrightness_title">Minimalna automatyczna jasność</string>
-  <string name="system_maxbrightness_title">Maksymalna automatyczna jasność</string>
+  <string name="system_minbrightness_title">Ustaw minimalną jasność</string>
+  <string name="system_maxbrightness_title">Ustaw maksymalną jasność</string>
   <string name="system_nosafevolume_title">Wyłącz ostrzeżenie o wysokiej głośności</string>
   <string name="system_nosafevolume_summ">Nie pokazuj okna dialogowego, gdy głośność osiągnie niebezpieczny poziom</string>
   <string name="system_noducking_title">Wyłącz wyciszanie</string>
@@ -242,14 +242,14 @@
   <string name="system_visualizer_colorval_title">Wybierz niestandardowy kolor</string>
   <string name="system_visualizer_dyntime_title">Dynamiczny odstęp zmiany koloru</string>
   <string name="system_ignorecalls_title">Ignoruj połączenia</string>
-  <string name="system_ignorecalls_summ">Zapobiegaj kradzieży dźwięku przez połączenia przychodzące w wybranych aplikacjach i przestań powiadamiać je o zmianach stanu połączenia</string>
+  <string name="system_ignorecalls_summ">Zapobiegaj przejmowaniu dźwięku przez połączenia przychodzące w wybranych aplikacjach i przestań powiadamiać je o zmianach stanu połączenia</string>
   <string name="system_nosilentvibrate_title">Wyłącz wibracje testowe</string>
   <string name="system_nosilentvibrate_summ">Nie wibruj, gdy przełączasz tryb dzwonka na cichy lub włączasz wibracje w tym trybie</string>
   <string name="system_vibration_title">Zablokuj wibracje</string>
   <string name="system_vibration_summ">Zapobiegaj używaniu wibracji przez wybrane aplikacje</string>
   <string name="system_volume">Dźwięki systemowe</string>
-  <string name="system_scramblepin_title">Wymieszaj PIN</string>
-  <string name="system_scramblepin_summ">Zmień losowo kolejność przycisków PIN</string>
+  <string name="system_scramblepin_title">Losowy układ cyfr PIN</string>
+  <string name="system_scramblepin_summ">Zmień losowo kolejność cyfr PIN</string>
   <string name="system_securelock_title">Ulepszony ekran blokady</string>
   <string name="system_securelock_summ">Wyłącz menu zasilania, gdy ekran blokady jest aktywny</string>
   <string name="system_secureqs_title">Bezpieczne szybkie ustawienia</string>
@@ -263,7 +263,7 @@
   <string name="system_secureqs_sync_title">Synchronizacja</string>
   <string name="system_lockscreen_strongauth_72h_title">Wyłącz wymuszoną podstawową autoryzację co 72 godziny</string>
   <string name="system_nopassword_title">Nie wymagaj hasła po uruchomieniu</string>
-  <string name="system_nopassword_summ">Nie wymagaj hasła zamiast odcisku palca przy pierwszym uruchomieniu. Mało prawdopodobne, aby działało na zaszyfrowanych urządzeniach.</string>
+  <string name="system_nopassword_summ">Nie wymagaj hasła zamiast odcisku palca przy pierwszym uruchomieniu. Funkcja może nie działać na zaszyfrowanych urządzeniach</string>
   <string name="system_albumartonlock_title">Okładka albumu jako tapeta</string>
   <string name="system_albumartonlock_summ">Wyświetl okładkę albumu aktualnie odtwarzanego utworu jako tapetę ekranu blokady</string>
   <string name="system_albumartonlock_gray_title">Skala szarości</string>
@@ -271,7 +271,7 @@
   <string name="system_albumartonlock_blur_title">Rozmycie okładki albumu</string>
   <string name="system_albumartonlock_scale_title">Skala okładki albumu</string>
   <string name="system_credentials_title">Odblokuj dane uwierzytelniające</string>
-  <string name="system_credentials_summ">Uwierzytelnianie w niektórych aplikacjach wymaga dostępu do danych uwierzytelniających, ale pozostają one zablokowane, jeśli PIN/hasło/wzór zostaną pominięte po uruchomieniu. Obecna opcja dodaje ikonę programu uruchamiającego, która umożliwia odblokowanie danych uwierzytelniających.</string>
+  <string name="system_credentials_summ">Uwierzytelnianie w niektórych aplikacjach wymaga dostępu do danych uwierzytelniających, ale pozostają one zablokowane, jeśli PIN/hasło/wzór zostaną pominięte po uruchomieniu. Obecna opcja dodaje ikonę w launcherze, która umożliwia odblokowanie danych uwierzytelniających.</string>
   <string name="system_lockscreenshortcuts_title">Działania niestandardowe</string>
   <string name="system_lockscreenshortcuts_summ">Dostosuj akcje skrótów i przesunięć</string>
   <string name="system_lockscreenshortcuts_right_title">Naciśnij i przytrzymaj przycisk aparatu</string>
@@ -334,7 +334,7 @@
   <string name="system_hidelowbatwarn_title">Ukryj ostrzeżenie o niskim poziomie baterii</string>
   <string name="system_hidelowbatwarn_summ">Nie wyświetlaj okna dialogowego z ostrzeżeniem, które prosi o włączenie funkcji oszczędzania baterii</string>
   <string name="system_hideproxywarn_title">Ukryj ostrzeżenie o wyłączonych naciśnięciach</string>
-  <string name="system_hideproxywarn_summ">Nie wyświetlaj ostrzeżenia, że &#x200B;&#x200B;obszar słuchawek jest zakryty</string>
+  <string name="system_hideproxywarn_summ">Nie wyświetlaj ostrzeżenia o zakryciu górnej części ekranu</string>
   <string name="system_cleanshare_title">Wyczyść menu udostępniania</string>
   <string name="system_cleanshare_summ">Usuń wybrane aplikacje z menu udostępniania</string>
   <string name="system_clean_test">Menu testowe</string>
@@ -361,11 +361,11 @@
   <string name="system_nosos_summ">Wyłącz przycisk połączenia alarmowego na ekranie blokady</string>
   <string name="system_taptounlock_title">Naciśnij, aby odblokować</string>
   <string name="system_taptounlock_summ">Rozpocznij odblokowywanie urządzenia, naciskając dolną część ekranu blokady</string>
-  <string name="system_dttosleep_title">Naciśnij dwukrotnie, aby uspać</string>
+  <string name="system_dttosleep_title">Naciśnij dwukrotnie, aby uśpić</string>
   <string name="system_dttosleep_summ">Wyłącz ekran, naciskając dwukrotnie dowolnego pustego miejsca na ekranie blokady</string>
   <string name="system_charginginfo_title">Wyświetl dane ładowania</string>
   <string name="system_charginginfo_summ">Pokaż dodatkowe informacje o ładowaniu na dole ekranu blokady</string>
-  <string name="system_charginginfo_view_title">Jak wyświetlić</string>
+  <string name="system_charginginfo_view_title">Ustaw sposób wyświetlania</string>
   <string name="system_charginginfo_current_title">Prąd ładowania</string>
   <string name="system_charginginfo_voltage_title">Napięcie baterii</string>
   <string name="system_charginginfo_wattage_title">Pobór mocy</string>
@@ -460,8 +460,8 @@
   <string name="launcher_folders">Foldery</string>
   <string name="launcher_folder_cols_title">Liczba kolumn w folderach</string>
   <string name="launcher_folderwidth_title">Użyj całej szerokości folderu</string>
-  <string name="launcher_disable_log_title">Wyłącz analitykę</string>
-  <string name="launcher_fixlaunch_title">Napraw informacje o aplikacji</string>
+  <string name="launcher_disable_log_title">Wyłącz zbieranie danych</string>
+  <string name="launcher_fixlaunch_title">Zmień styl informacji o aplikacji</string>
   <string name="launcher_fixlaunch_summ">Zawsze otwieraj informacje o aplikacji w stylu HyperOS po długim naciśnięciu menu</string>
   <string name="launcher_closefolder_title">Automatyczne zamykanie folderów</string>
   <string name="launcher_closefolder_summ">Zamknij folder aplikacji po włączeniu</string>
@@ -526,9 +526,9 @@
   <string name="controls_volumecursor_reverse_summ">Zamień kierunki ruchów kursora</string>
   <string name="controls_volumedowndt_turnon_torch_title">Naciśnij dwukrotnie przycisk zmniejszania głośności, aby włączyć latarkę</string>
   <string name="controls_mediaplayer_apps_title">Aplikacje odtwarzacza multimedialnego (najpierw dodaj do zakresu Vector)</string>
-  <string name="controls_volumemedia_up_title">Naciśnij i przytrzymaj przycisk zwiększania głośności</string>
+  <string name="controls_volumemedia_up_title">Przytrzymaj przycisk zwiększania głośności</string>
   <string name="controls_volumemedia_up_summ">Działanie dotyczące naciśnięcia i przytrzymania przycisku zwiększania głośności przy wyłączonym ekranie</string>
-  <string name="controls_volumemedia_down_title">Naciśnij i przytrzymaj przycisk zmniejszania głośności</string>
+  <string name="controls_volumemedia_down_title">Przytrzymaj przycisk zmniejszania głośności</string>
   <string name="controls_volumemedia_down_summ">Działanie dotyczące naciśnięcia i przytrzymania przycisku zmniejszania głośności przy wyłączonym ekranie</string>
   <string name="controls_volumemedia_vibrate_title">Wibruj przy naciśnięciu i przytrzymaniu</string>
   <string name="controls_volumemedia_vibrate_summ">Wibracja po naciśnięciu i przytrzymaniu</string>
@@ -541,11 +541,11 @@
   <string name="controls_homelong_title">Naciśnij i przytrzymaj przycisk ekran główny</string>
   <string name="controls_menulong_title">Naciśnij i przytrzymaj przycisk menu</string>
   <string name="controls_navbarleft_summ">Działanie po naciśnięciu lewego dodatkowego przycisku nawigacyjnego</string>
-  <string name="controls_navbarleft_title">Działanie lewego przycisku</string>
+  <string name="controls_navbarleft_title">Naciśnij lewy przycisk</string>
   <string name="controls_navbarleftlong_summ">Działanie na lewym dodatkowym przycisku nawigacyjnym - naciśnij i przytrzymaj</string>
   <string name="controls_navbarleftlong_title">Naciśnij i przytrzymaj lewy przycisk</string>
   <string name="controls_navbarright_summ">Działanie po naciśnięciu prawego dodatkowego przycisku nawigacyjnego</string>
-  <string name="controls_navbarright_title">Działanie prawego przycisku</string>
+  <string name="controls_navbarright_title">Naciśnij prawy przycisk</string>
   <string name="controls_navbarrightlong_summ">Działanie na prawym dodatkowym przycisku nawigacyjnym - naciśnij i przytrzymaj</string>
   <string name="controls_navbarrightlong_title">Naciśnij i przytrzymaj prawy przycisk</string>
   <string name="controls_navbarmargin_title">Dodatkowy margines</string>
@@ -556,9 +556,9 @@
   <string name="controls_fsg_width_title">Szerokość obszaru gestu powrotu</string>
   <string name="controls_fsg_horiz_title">Gesty poziome</string>
   <string name="controls_fsg_horiz_summ">Włącz zarówno gesty poziome, jak i pasek nawigacyjny</string>
-  <string name="controls_fsg_assist_left_title">Przesunięcie w lewym rogu</string>
-  <string name="controls_fsg_assist_right_title">Przesunięcie w prawym rogu</string>
-  <string name="controls_fsg_swipeandstop_title">Przesuń palcem po ekranie, zaczynając od krawędzi i zatrzymaj działanie</string>
+  <string name="controls_fsg_assist_left_title">Przesuń w lewym rogu</string>
+  <string name="controls_fsg_assist_right_title">Przesuń w prawym rogu</string>
+  <string name="controls_fsg_swipeandstop_title">Przesuń palcem od krawędzi i przytrzymaj</string>
   <string name="controls_fsg_swipeandstop_disablevibrate_title">Nie wibruj</string>
   <string name="various_mods">Różne</string>
   <string name="various_hiddenfeatures_title">Ukryte funkcje</string>
@@ -597,13 +597,13 @@
   <string name="various_restrictapp_title">Ustaw pełne ograniczenia</string>
   <string name="various_restrictapp_summ">Zezwól na konfigurację oszczędzania baterii i dostępu do Wi-Fi dla aplikacji systemowych</string>
   <string name="various_hide_report_ondetails_title">Ukryj przycisk raportu w szczegółach aplikacji</string>
-  <string name="various_disableapp_title">Kontrola stanu aplikacji</string>
+  <string name="various_disableapp_title">Kontroluj  stan aplikacji</string>
   <string name="various_disableapp_summ">Zezwól na wyłączenie niemal każdej aplikacji z poziomu jej strony informacyjnej</string>
   <string name="various_securitycenter_unlock_title">Odblokuj funkcje Centrum bezpieczeństwa</string>
   <string name="various_package_installer_cat_title">Odblokuj funkcje instalatora pakietów</string>
   <string name="various_apps_title">Pokaż dodatkowe szczegóły aplikacji</string>
   <string name="various_apps_summ">Dodaj nowe pola do strony z informacjami o aplikacji:\n- Kod wersji\n- Pełna ścieżka do pliku APK\n- Ścieżka danych\n- Identyfikator użytkownika\n- Docelowa wersja SDK\n- Link do strony w Sklepie Google Play\n- Włącz aplikację</string>
-  <string name="various_appsort_title">Początkowa kolejność sortowania zainstalowanych aplikacji</string>
+  <string name="various_appsort_title">Kolejność sortowania</string>
   <string name="disable_app_title">Wyłączyć aplikację?</string>
   <string name="disable_app_text">Jeśli jest to istotna aplikacja systemowa, jej wyłączenie może wszystko popsuć</string>
   <string name="disable_app_settings">To zły pomysł!</string>
@@ -626,7 +626,7 @@
   <string name="array_default">Domyślnie</string>
   <string name="array_allow">Zezwól</string>
   <string name="array_deny">Odmów</string>
-  <string name="array_system_default">Systemowe</string>
+  <string name="array_system_default">Systemowy</string>
   <string name="array_global_actions_none">Brak działania</string>
   <string name="array_global_actions_notif">Rozwiń szufladę powiadomień</string>
   <string name="array_global_actions_eqs">Rozwiń panel szybkich ustawień</string>
@@ -970,8 +970,8 @@
   <string name="various_allow_untrusted_touch_title">Zezwól na niezaufane naciśnięcie</string>
   <string name="various_persist_batteryoptimization_settings_title">Zachowaj ustawienia optymalizacji baterii</string>
   <string name="various_disable_defraud_apps_detect_title">Wyłącz wykrywanie podejrzanych aplikacji</string>
-  <string name="various_disable_access_devicelogs_title">Zamknij okno dialogowe żądania dostępu do dzienników urządzenia</string>
-  <string name="various_skip_interceptperm_title">Pomiń licznik przechwytywania uprawnień</string>
+  <string name="various_disable_access_devicelogs_title">Pomiń okno żądania dostępu do dzienników urządzenia</string>
+  <string name="various_skip_interceptperm_title">Pomiń licznik weryfikacji uprawnień</string>
   <string name="various_open_by_default_title">Otwórz domyślnie</string>
   <string name="various_skip_securityscan_title">Pomiń skanowanie bezpieczeństwa</string>
   <string name="various_show_battery_temperature_title">Pokaż temperaturę baterii</string>
