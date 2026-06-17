@@ -37,6 +37,8 @@ public class SubFragment extends PreferenceFragmentBase {
     protected String sub = "";
     protected Bundle catInfo = null;
     protected boolean isStandalone = false;
+    // Deklaracja brakującej zmiennej, której szuka kompilator
+    protected boolean isCustomActionBar = false;
     private float order = 100.0f;
     private String highlightKey = null;
     public boolean padded = true;
@@ -59,8 +61,7 @@ public class SubFragment extends PreferenceFragmentBase {
         }
         
         isCustomActionBar = (abType == AppHelper.ActionBarType.Edit);
-        toolbarMenu = toolbarMenu || isCustomActionBar;
-
+        
         if (contentResId == 0) {
             if (getActivity() != null) getActivity().finish();
             return;
@@ -73,6 +74,8 @@ public class SubFragment extends PreferenceFragmentBase {
         }
     }
 
+    // [Reszta kodu pozostaje bez zmian]
+    
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
