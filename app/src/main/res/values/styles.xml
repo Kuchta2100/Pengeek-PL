@@ -86,7 +86,7 @@
 
         <style name="AppTextAppearance">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
-                <item name="android:textColor">?android:attr/textColorSecondary</item>
+                <item name="android:textColor">@color/preference_category_text_color</item>
                 <item name="android:textColorHighlight">?android:attr/textColorHighlight</item>
                 <item name="android:textColorHint">?android:attr/textColorHint</item>
                 <item name="android:textColorLink">?android:attr/textColorLink</item>
@@ -96,7 +96,7 @@
                 <item name="android:textStyle">normal</item>
         </style>
         
-        <style name="AppTextAppearance.Secondary" parent="TextAppearance.AppCompat.Display1">
+        <style name="AppTextAppearance.Secondary" parent="AppTextAppearance">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
                 <item name="android:textStyle">normal</item>
                 <item name="android:textColor">@color/preference_category_text_color</item>
