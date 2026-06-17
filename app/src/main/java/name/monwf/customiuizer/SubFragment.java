@@ -95,7 +95,8 @@ public class SubFragment extends PreferenceFragmentBase {
             super.onCreatePreferences(savedInstanceState, rootKey);
             
             PreferenceState highlightPref;
-            if (highlightKey != null && (highlightPref = findPreference(highlightKey)) != null) {
+            PreferenceScreen screen = getPreferenceScreen();
+            if (highlightKey != null && screen != null && (highlightPref = (PreferenceState) screen.findPreference(highlightKey)) != null) {
                 highlightPref.applyHighlight();
             }
         }
