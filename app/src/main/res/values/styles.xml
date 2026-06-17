@@ -160,15 +160,10 @@
         </style>
 
         <style name="AppSeekBarPreference" parent="@style/Preference.SeekBarPreference.Material">
-                <item name="android:theme">@style/SeekBarThemeOverlay</item>
+                <item name="android:theme">@style/SeekBarTextTheme</item>
         </style>
 
-        <style name="SeekBarThemeOverlay">
-                <item name="android:textColorSecondary">@color/preference_category_text_color</item>
-                <item name="android:textAppearanceListItemSecondary">@style/SeekBarValueTextAppearance</item>
-        </style>
-
-        <style name="SeekBarValueTextAppearance" parent="AppTextAppearance.Secondary">
-                <item name="android:textColor">@color/preference_category_text_color</item>
+        <style name="SeekBarTextTheme">
+                <item name="android:textColorPrimary">@color/preference_category_text_color</item>
         </style>
 </resources>
