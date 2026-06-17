@@ -13,8 +13,6 @@
                 <item name="android:textAppearanceListItem">@style/AppTextAppearance.Primary</item>
                 <item name="android:textAppearanceListItemSecondary">@style/AppTextAppearance.Secondary</item>
                 
-                <item name="android:textColorSecondary">@color/preference_category_text_color</item>
-                
                 <item name="preferenceCategoryStyle">@style/AppPreferenceCategory</item>
                 
                 <item name="android:listPreferredItemPaddingLeft">@dimen/preference_item_child_padding</item>
@@ -50,10 +48,26 @@
         <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay.v14.Material">
                 <item name="preferenceFragmentCompatStyle">@style/AppPreferenceFragmentCompatStyle</item>
                 <item name="seekBarPreferenceStyle">@style/AppSeekBarPreference</item>
+                <item name="preferenceStyle">@style/AppPreferenceStyle</item>
+                <item name="switchPreferenceCompatStyle">@style/AppPreferenceStyle</item>
+                <item name="switchPreferenceStyle">@style/AppPreferenceStyle</item>
+                <item name="checkBoxPreferenceStyle">@style/AppPreferenceStyle</item>
+                <item name="dialogPreferenceStyle">@style/AppPreferenceStyle</item>
+                <item name="editTextPreferenceStyle">@style/AppPreferenceStyle</item>
         </style>
+        
         <style name="AppPreferenceFragmentCompatStyle" parent="@style/PreferenceFragment.Material">
                 <item name="android:layout">@layout/prefs_fragment_base</item>
         </style>
+
+        <style name="AppPreferenceStyle" parent="@style/Preference.Material">
+                <item name="summaryTextAppearance">@style/AppTextAppearance.Secondary</item>
+        </style>
+
+        <style name="AppSeekBarPreference" parent="@style/Preference.SeekBarPreference.Material">
+                <item name="summaryTextAppearance">@style/AppTextAppearance.Secondary</item>
+        </style>
+
         <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
                 <item name="android:overlapAnchor">false</item>
                 <item name="android:popupBackground">@drawable/popmenu_background</item>
@@ -67,8 +81,7 @@
                 <item name="android:windowContentOverlay">@null</item>
                 <item name="android:windowIsFloating">false</item>
                 <item name="android:windowTranslucentStatus">true</item>
-                <item name="android:windowTranslucentNavigation">true</item>
-        </style>
+                <item name="android:windowTranslucentNavigation">true</style>
 
         <style name="ApplyInvisible">
                 <item name="android:backgroundDimEnabled">true</item>
@@ -96,7 +109,7 @@
                 <item name="android:textStyle">normal</item>
         </style>
         
-        <style name="AppTextAppearance.Secondary" parent="AppTextAppearance">
+        <style name="AppTextAppearance.Secondary" parent="TextAppearance.MaterialComponents.Body2">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
                 <item name="android:textStyle">normal</item>
                 <item name="android:textColor">@color/preference_category_text_color</item>
@@ -161,8 +174,5 @@
         </style>
 
         <style name="AppTheme.ComposeHost" parent="AppTheme">
-        </style>
-
-        <style name="AppSeekBarPreference" parent="@style/Preference.SeekBarPreference.Material">
         </style>
 </resources>
