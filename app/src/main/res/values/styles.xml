@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
         <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -13,8 +14,6 @@
                 <item name="android:spinnerItemStyle">@style/DropDownItemStyle</item>
                 <item name="android:textAppearanceListItem">@style/AppTextAppearance.Primary</item>
                 <item name="android:textAppearanceListItemSecondary">@style/AppTextAppearance.Secondary</item>
-                <item name="android:textColorPrimary">@color/preference_primary_text</item>
-                <item name="android:textColorSecondary">@color/preference_secondary_text</item>
                 <item name="android:listPreferredItemPaddingLeft">@dimen/preference_item_child_padding</item>
                 <item name="android:listPreferredItemPaddingStart">@dimen/preference_item_child_padding</item>
                 <item name="colorAccent">@color/highlight_normal_light</item>
@@ -152,10 +151,5 @@
                 <item name="android:indeterminateDrawable">@drawable/progressbar_indeterminate</item>
                 <item name="android:minWidth">@dimen/progressbar_size</item>
                 <item name="android:minHeight">@dimen/progressbar_size</item>
-<!--
-                <item name="indeterminateFramesCount">48</item>
-                <item name="indeterminateFramesDuration">25</item>
--->
         </style>
-
 </resources>
