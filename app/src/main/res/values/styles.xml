@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
         <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -96,7 +97,7 @@
 
         <style name="AppPreferenceCategory" parent="PreferenceCategoryTitleTextStyle">
                 <item name="android:textSize">@dimen/preference_category_text_size</item>
-                <item name="android:textColor">?android:attr/textColorPrimary</item>
+                <item name="android:textColor">@color/preference_category_text_color</item>
         </style>
 
         <style name="AppTextAppearance.Widget" />
@@ -135,7 +136,7 @@
                 <item name="textAllCaps">true</item>
                 <item name="android:paddingStart">@dimen/preference_item_child_padding</item>
                 <item name="android:textSize">@dimen/preference_category_text_size</item>
-                <item name="android:textColor">?android:attr/textColorPrimary</item>
+                <item name="android:textColor">@color/preference_category_text_color</item>
         </style>
         <style name="Widget.InputField.Category.First">
                 <item name="android:layout_marginTop">0dp</item>
