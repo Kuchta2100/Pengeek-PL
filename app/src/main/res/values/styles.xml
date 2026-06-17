@@ -153,6 +153,6 @@
 		<item name="android:indeterminateDrawable">@drawable/progressbar_indeterminate</item>
 		<item name="android:minWidth">@dimen/progressbar_size</item>
 		<item name="android:minHeight">@dimen/progressbar_size</item>
-</style>
+	</style>
 
 </resources>
