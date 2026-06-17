@@ -85,11 +85,14 @@ public class SubFragment extends PreferenceFragmentBase {
             else if (!isStandalone && sub != null) {
                 PreferenceScreen screen = getPreferenceScreen();
                 if (screen != null && screen.getPreferenceCount() > 0) {
-                    PreferenceCategoryEx category = (PreferenceCategoryEx)screen.getPreference(0);
-                    if (category.isDynamic())
-                        actionBar.setTitle(category.getTitle() + " ⟲");
-                    else
-                        actionBar.setTitle(category.getTitle());
+                    Preference pref0 = screen.getPreference(0);
+                    if (pref0 instanceof PreferenceCategoryEx) {
+                        PreferenceCategoryEx category = (PreferenceCategoryEx) pref0;
+                        if (category.isDynamic())
+                            actionBar.setTitle(category.getTitle() + " ⟲");
+                        else
+                            actionBar.setTitle(category.getTitle());
+                    }
                 }
             }
             else {
@@ -368,15 +371,7 @@ public class SubFragment extends PreferenceFragmentBase {
                 screen.removePreference(pref);
             } else {
                 if (pref instanceof PreferenceCategoryEx) {
-                    PreferenceCategoryEx category = (PreferenceCategoryEx) pref;
-                    ActionBar actionBar = getActionBar();
-                    if (actionBar != null) {
-                        if (category.isDynamic())
-                            actionBar.setTitle(pref.getTitle() + " ⟲");
-                        else
-                            actionBar.setTitle(pref.getTitle());
-                    }
-                    category.hide();
+                    ((PreferenceCategoryEx) pref).hide();
                 }
             }
         }
