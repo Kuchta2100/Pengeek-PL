@@ -371,7 +371,20 @@ public class SubFragment extends PreferenceFragmentBase {
                 screen.removePreference(pref);
             } else {
                 if (pref instanceof PreferenceCategoryEx) {
-                    ((PreferenceCategoryEx) pref).hide();
+                    PreferenceCategoryEx category = (PreferenceCategoryEx) pref;
+                    ActionBar actionBar = getActionBar();
+                    if (actionBar != null) {
+                        if (category.isDynamic())
+                            actionBar.setTitle(pref.getTitle() + " ⟲");
+                        else
+                            actionBar.setTitle(pref.getTitle());
+                    }
+                    category.hide();
+                } else {
+                    ActionBar actionBar = getActionBar();
+                    if (actionBar != null) {
+                        actionBar.setTitle(pref.getTitle());
+                    }
                 }
             }
         }
