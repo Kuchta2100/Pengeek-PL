@@ -1,7 +1,6 @@
 package name.monwf.customiuizer;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,23 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import name.monwf.customiuizer.prefs.PreferenceCategoryEx;
 import name.monwf.customiuizer.prefs.PreferenceState;
 import name.monwf.customiuizer.prefs.SpinnerEx;
 import name.monwf.customiuizer.prefs.SpinnerExFake;
-import name.monwf.customiuizer.subs.AppSelector;
-import name.monwf.customiuizer.subs.MultiAction;
-import name.monwf.customiuizer.subs.SortableList;
 import name.monwf.customiuizer.utils.AppHelper;
 import name.monwf.customiuizer.utils.Helpers;
 
@@ -37,8 +30,10 @@ public class SubFragment extends PreferenceFragmentBase {
     protected String sub = "";
     protected Bundle catInfo = null;
     protected boolean isStandalone = false;
-    // Deklaracja brakującej zmiennej, której szuka kompilator
+    // Te zmienne są wymagane przez Twoją klasę bazową, dlatego muszą tu być:
     protected boolean isCustomActionBar = false;
+    protected boolean toolbarMenu = false;
+    
     private float order = 100.0f;
     private String highlightKey = null;
     public boolean padded = true;
@@ -61,7 +56,8 @@ public class SubFragment extends PreferenceFragmentBase {
         }
         
         isCustomActionBar = (abType == AppHelper.ActionBarType.Edit);
-        
+        toolbarMenu = toolbarMenu || isCustomActionBar;
+
         if (contentResId == 0) {
             if (getActivity() != null) getActivity().finish();
             return;
@@ -74,8 +70,6 @@ public class SubFragment extends PreferenceFragmentBase {
         }
     }
 
-    // [Reszta kodu pozostaje bez zmian]
-    
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -86,8 +80,7 @@ public class SubFragment extends PreferenceFragmentBase {
         if (actionBar != null) {
             if (isStandalone && catInfo != null && catInfo.getBoolean("isDynamic")) {
                 actionBar.setTitle(settingTitle + " ⟲");
-            }
-            else if (!isStandalone && !sub.isEmpty()) {
+            } else if (!isStandalone && !sub.isEmpty()) {
                 PreferenceScreen screen = getPreferenceScreen();
                 if (screen != null && screen.getPreferenceCount() > 0) {
                     Preference pref0 = screen.getPreference(0);
@@ -99,8 +92,7 @@ public class SubFragment extends PreferenceFragmentBase {
                 } else {
                     actionBar.setTitle(settingTitle);
                 }
-            }
-            else {
+            } else {
                 actionBar.setTitle(settingTitle);
             }
         }
@@ -133,29 +125,15 @@ public class SubFragment extends PreferenceFragmentBase {
         }
     }
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        view.setTranslationZ(order);
-    }
+    public void selectSub() {
+        if (isStandalone) return;
+        PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null || sub.isEmpty()) return;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (highlightKey != null) {
-            RecyclerView mList = getListView();
-            if (mList != null && mList.getAdapter() instanceof PreferenceGroup.PreferencePositionCallback) {
-                int position = ((PreferenceGroup.PreferencePositionCallback) mList.getAdapter())
-                    .getPreferenceAdapterPosition(highlightKey);
-                highlightKey = null;
-                if (position >= 9) {
-                    RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(mList.getContext()) {
-                        @Override protected int getVerticalSnapPreference() { return LinearSmoothScroller.SNAP_TO_START; }
-                    };
-                    smoothScroller.setTargetPosition(position);
-                    View v = getView();
-                    if (v != null) v.postDelayed(() -> mList.getLayoutManager().startSmoothScroll(smoothScroller), 380);
-                }
+        for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
+            Preference pref = screen.getPreference(i);
+            if (pref != null && pref.getKey() != null && !pref.getKey().equals(sub)) {
+                screen.removePreference(pref);
             }
         }
     }
@@ -189,19 +167,6 @@ public class SubFragment extends PreferenceFragmentBase {
                 if (nView instanceof TextView) {
                     ((TextView)nView).setText(AppHelper.getStringOfAppPrefs((String)nView.getTag(), ""));
                 }
-            }
-        }
-    }
-
-    public void selectSub() {
-        if (isStandalone) return;
-        PreferenceScreen screen = getPreferenceScreen();
-        if (screen == null || sub.isEmpty()) return;
-        
-        for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
-            Preference pref = screen.getPreference(i);
-            if (pref != null && pref.getKey() != null && !pref.getKey().equals(sub)) {
-                screen.removePreference(pref);
             }
         }
     }
