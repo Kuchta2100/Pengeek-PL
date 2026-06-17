@@ -30,8 +30,8 @@ public class SubFragment extends PreferenceFragmentBase {
     protected String sub = "";
     protected Bundle catInfo = null;
     protected boolean isStandalone = false;
-    protected boolean isCustomActionBar = false;
-    protected boolean toolbarMenu = false;
+    private boolean localIsCustomActionBar = false;
+    private boolean localToolbarMenu = false;
     
     private float order = 100.0f;
     private String highlightKey = null;
@@ -54,8 +54,8 @@ public class SubFragment extends PreferenceFragmentBase {
             highlightKey = args.getString("mod");
         }
         
-        isCustomActionBar = (abType == AppHelper.ActionBarType.Edit);
-        toolbarMenu = toolbarMenu || isCustomActionBar;
+        localIsCustomActionBar = (abType == AppHelper.ActionBarType.Edit);
+        localToolbarMenu = localToolbarMenu || localIsCustomActionBar;
 
         if (contentResId == 0) {
             if (getActivity() != null) getActivity().finish();
