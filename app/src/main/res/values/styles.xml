@@ -159,7 +159,7 @@
         <style name="AppTheme.ComposeHost" parent="AppTheme">
         </style>
 
-        <style name="AppSeekBarPreference" parent="@style/Preference.Material.SeekBarPreference">
+        <style name="AppSeekBarPreference" parent="@style/Preference.SeekBarPreference.Material">
                 <item name="android:theme">@style/SeekBarThemeOverlay</item>
         </style>
 
