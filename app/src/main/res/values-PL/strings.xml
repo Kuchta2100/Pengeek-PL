@@ -963,7 +963,7 @@
   <string name="system_statusbaricons_change_position_title">Zmień położenie ikon</string>
   <string name="system_statusbar_mobile_signal_cat_title">Ustawienia wyświetlania ikony sygnału mobilnego</string>
   <string name="system_statusbar_clocktweak_title">Ustawienia zegara</string>
-  <string name="system_statusbar_enable_weather_param_title">Użyj tq do wyświetlania pogody podczas formatowania</string>
+  <string name="system_statusbar_enable_weather_param_title">Użyj parametru "\tq\" w niestandardowym formacie zegara, żeby pokazywać pogodę</string>
   <string name="system_statusbar_line_spacing_multiplier_title">Mnożnik odstępu między wierszami tekstu</string>
   <string name="system_statusbaricons_netspeed_title">Wskaźnik prędkości sieci</string>
   <string name="system_statusbaricons_clock_title">Zegar</string>
