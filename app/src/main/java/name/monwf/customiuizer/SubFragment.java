@@ -84,11 +84,13 @@ public class SubFragment extends PreferenceFragmentBase {
             }
             else if (!isStandalone && sub != null) {
                 PreferenceScreen screen = getPreferenceScreen();
-                PreferenceCategoryEx category = (PreferenceCategoryEx)screen.getPreference(0);
-                if (category.isDynamic())
-                    actionBar.setTitle(category.getTitle() + " ⟲");
-                else
-                    actionBar.setTitle(category.getTitle());
+                if (screen != null && screen.getPreferenceCount() > 0) {
+                    PreferenceCategoryEx category = (PreferenceCategoryEx)screen.getPreference(0);
+                    if (category.isDynamic())
+                        actionBar.setTitle(category.getTitle() + " ⟲");
+                    else
+                        actionBar.setTitle(category.getTitle());
+                }
             }
             else {
                 actionBar.setTitle(settingTitle);
@@ -355,21 +357,27 @@ public class SubFragment extends PreferenceFragmentBase {
     public void selectSub() {
         if (isStandalone) return;
         PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null) return;
+        
         int cnt = screen.getPreferenceCount();
         for (int i = cnt - 1; i >= 0; i--) {
             Preference pref = screen.getPreference(i);
-            if (!pref.getKey().equals(sub))
+            if (pref == null) continue;
+            
+            if (!pref.getKey().equals(sub)) {
                 screen.removePreference(pref);
-            else {
-                PreferenceCategoryEx category = (PreferenceCategoryEx)pref;
-                ActionBar actionBar = getActionBar();
-                if (actionBar != null) {
-                    if (category.isDynamic())
-                        actionBar.setTitle(pref.getTitle() + " ⟲");
-                    else
-                        actionBar.setTitle(pref.getTitle());
+            } else {
+                if (pref instanceof PreferenceCategoryEx) {
+                    PreferenceCategoryEx category = (PreferenceCategoryEx) pref;
+                    ActionBar actionBar = getActionBar();
+                    if (actionBar != null) {
+                        if (category.isDynamic())
+                            actionBar.setTitle(pref.getTitle() + " ⟲");
+                        else
+                            actionBar.setTitle(pref.getTitle());
+                    }
+                    category.hide();
                 }
-                category.hide();
             }
         }
     }
