@@ -55,11 +55,8 @@ public class SubFragment extends PreferenceFragmentBase {
             return;
         }
 
-        if (settingsType == AppHelper.SettingsType.Preference) {
-            super.onCreate(savedInstanceState, contentResId);
-        } else {
-            super.onCreate(savedInstanceState);
-        }
+        // Naprawiono: wywołujemy tylko super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -69,7 +66,6 @@ public class SubFragment extends PreferenceFragmentBase {
             loadSharedPrefs();
         }
         
-        // Poprawka: użycie poprawnego rzutowania na AppCompatActivity
         if (getActivity() instanceof AppCompatActivity) {
             ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
             if (actionBar != null) {
