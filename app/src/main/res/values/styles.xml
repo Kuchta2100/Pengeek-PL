@@ -13,6 +13,8 @@
                 <item name="android:textAppearanceListItem">@style/AppTextAppearance.Primary</item>
                 <item name="android:textAppearanceListItemSecondary">@style/AppTextAppearance.Secondary</item>
                 
+                <item name="android:textColorSecondary">@color/preference_category_text_color</item>
+                
                 <item name="preferenceCategoryStyle">@style/AppPreferenceCategory</item>
                 
                 <item name="android:listPreferredItemPaddingLeft">@dimen/preference_item_child_padding</item>
@@ -93,9 +95,11 @@
                 <item name="android:textSize">@dimen/normal_text_size</item>
                 <item name="android:textStyle">normal</item>
         </style>
+        
         <style name="AppTextAppearance.Secondary" parent="TextAppearance.AppCompat.Display1">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
                 <item name="android:textStyle">normal</item>
+                <item name="android:textColor">@color/preference_category_text_color</item>
         </style>
 
         <style name="AppPreferenceCategory" parent="PreferenceCategoryTitleTextStyle">
@@ -160,10 +164,5 @@
         </style>
 
         <style name="AppSeekBarPreference" parent="@style/Preference.SeekBarPreference.Material">
-                <item name="android:theme">@style/SeekBarTextTheme</item>
-        </style>
-
-        <style name="SeekBarTextTheme">
-                <item name="android:textColorPrimary">@color/preference_category_text_color</item>
         </style>
 </resources>
