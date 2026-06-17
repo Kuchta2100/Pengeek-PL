@@ -55,7 +55,6 @@ public class SubFragment extends PreferenceFragmentBase {
             return;
         }
 
-        // Naprawiono: wywołujemy tylko super.onCreate(savedInstanceState)
         super.onCreate(savedInstanceState);
     }
 
@@ -94,7 +93,7 @@ public class SubFragment extends PreferenceFragmentBase {
     public void onCreatePreferences(@Nullable Bundle savedInstanceState, @Nullable String rootKey) {
         if (settingsType == AppHelper.SettingsType.Preference) {
             super.onCreatePreferences(savedInstanceState, rootKey);
-            setPreferencesFromResource(contentResId, rootKey);
+            
             PreferenceState highlightPref;
             if (highlightKey != null && (highlightPref = findPreference(highlightKey)) != null) {
                 highlightPref.applyHighlight();
