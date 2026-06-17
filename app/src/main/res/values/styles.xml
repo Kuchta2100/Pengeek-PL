@@ -22,6 +22,7 @@
                 <item name="dialogTheme">@style/AppDialogStyle</item>
                 <item name="alertDialogTheme">@style/AppDialogStyle</item>
                 <item name="preferenceTheme">@style/AppPreferenceTheme</item>
+                <item name="seekBarPreferenceStyle">@style/AppSeekBarPreference</item>
                 <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
         </style>
         <style name="AppSpinnerStyle" parent="@style/Widget.AppCompat.Spinner.DropDown">
@@ -156,5 +157,17 @@
         </style>
 
         <style name="AppTheme.ComposeHost" parent="AppTheme">
+        </style>
+
+        <style name="AppSeekBarPreference" parent="@style/Preference.Material.SeekBarPreference">
+                <item name="android:theme">@style/SeekBarThemeOverlay</item>
+        </style>
+
+        <style name="SeekBarThemeOverlay">
+                <item name="android:textAppearanceListItemSecondary">@style/SeekBarValueTextAppearance</item>
+        </style>
+
+        <style name="SeekBarValueTextAppearance" parent="AppTextAppearance.Secondary">
+                <item name="android:textColor">@color/preference_category_text_color</item>
         </style>
 </resources>
