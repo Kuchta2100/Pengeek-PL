@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
         <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -13,6 +12,9 @@
                 <item name="android:spinnerItemStyle">@style/DropDownItemStyle</item>
                 <item name="android:textAppearanceListItem">@style/AppTextAppearance.Primary</item>
                 <item name="android:textAppearanceListItemSecondary">@style/AppTextAppearance.Secondary</item>
+                
+                <item name="preferenceCategoryStyle">@style/AppPreferenceCategory</item>
+                
                 <item name="android:listPreferredItemPaddingLeft">@dimen/preference_item_child_padding</item>
                 <item name="android:listPreferredItemPaddingStart">@dimen/preference_item_child_padding</item>
                 <item name="colorAccent">@color/highlight_normal_light</item>
@@ -133,7 +135,7 @@
                 <item name="android:paddingBottom">9dp</item>
                 <item name="android:layout_marginTop">8dp</item>
                 <item name="android:layout_height">50dp</item>
-                <item name="textAllCaps">true</item>
+                <item name="android:textAllCaps">true</item>
                 <item name="android:paddingStart">@dimen/preference_item_child_padding</item>
                 <item name="android:textSize">@dimen/preference_category_text_size</item>
                 <item name="android:textColor">@color/preference_category_text_color</item>
