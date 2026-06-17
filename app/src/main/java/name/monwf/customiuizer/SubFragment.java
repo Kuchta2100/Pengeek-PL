@@ -34,7 +34,7 @@ import name.monwf.customiuizer.utils.Helpers;
 public class SubFragment extends PreferenceFragmentBase {
     private int contentResId = 0;
     public String settingTitle = "";
-    protected String sub;
+    protected String sub = "";
     protected Bundle catInfo = null;
     protected boolean isStandalone = false;
     private float order = 100.0f;
@@ -45,22 +45,26 @@ public class SubFragment extends PreferenceFragmentBase {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        settingsType = AppHelper.SettingsType.values()[getArguments().getInt("settingsType")];
-        abType = AppHelper.ActionBarType.values()[getArguments().getInt("abType")];
-        contentResId = getArguments().getInt("contentResId");
-        settingTitle = getArguments().getString("titleResId");
-        order = getArguments().getFloat("order") + 10.0f;
-        catInfo = getArguments().getBundle("catInfo");
-        sub = getArguments().getString("sub");
-        isStandalone = getArguments().getBoolean("isStandalone");
-        highlightKey = getArguments().getString("mod");
+        Bundle args = getArguments();
+        if (args != null) {
+            settingsType = AppHelper.SettingsType.values()[args.getInt("settingsType")];
+            abType = AppHelper.ActionBarType.values()[args.getInt("abType")];
+            contentResId = args.getInt("contentResId");
+            settingTitle = args.getString("titleResId", "");
+            order = args.getFloat("order") + 10.0f;
+            catInfo = args.getBundle("catInfo");
+            sub = args.getString("sub", "");
+            isStandalone = args.getBoolean("isStandalone");
+            highlightKey = args.getString("mod");
+        }
+        
         if (abType == AppHelper.ActionBarType.Edit) {
             isCustomActionBar = true;
         }
         toolbarMenu = toolbarMenu || isCustomActionBar;
 
         if (contentResId == 0) {
-            getActivity().finish();
+            if (getActivity() != null) getActivity().finish();
             return;
         }
 
@@ -82,7 +86,7 @@ public class SubFragment extends PreferenceFragmentBase {
             if (isStandalone && catInfo != null && catInfo.getBoolean("isDynamic")) {
                 actionBar.setTitle(settingTitle + " ⟲");
             }
-            else if (!isStandalone && sub != null) {
+            else if (!isStandalone && !sub.isEmpty()) {
                 PreferenceScreen screen = getPreferenceScreen();
                 if (screen != null && screen.getPreferenceCount() > 0) {
                     Preference pref0 = screen.getPreference(0);
@@ -110,16 +114,11 @@ public class SubFragment extends PreferenceFragmentBase {
             if (highlightKey != null && (highlightPref = findPreference(highlightKey)) != null) {
                 highlightPref.applyHighlight();
             }
-            else {
-                highlightKey = null;
-            }
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         try {
             LayoutInflater crtInflator = inflater.cloneInContext(requireContext());
             if (settingsType == AppHelper.SettingsType.Preference) {
@@ -144,235 +143,63 @@ public class SubFragment extends PreferenceFragmentBase {
         super.onStart();
         if (highlightKey != null) {
             RecyclerView mList = getListView();
-            if (mList != null && mList.getAdapter() != null) {
+            if (mList != null && mList.getAdapter() instanceof PreferenceGroup.PreferencePositionCallback) {
                 int position = ((PreferenceGroup.PreferencePositionCallback) mList.getAdapter())
                     .getPreferenceAdapterPosition(highlightKey);
                 highlightKey = null;
-                if (position < 9) return;
-                RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(mList.getContext()) {
-                    @Override protected int getVerticalSnapPreference() {
-                        return LinearSmoothScroller.SNAP_TO_START;
-                    }
-                };
-                smoothScroller.setTargetPosition(position);
-                getView().postDelayed(() -> {
-                    mList.getLayoutManager().startSmoothScroll(smoothScroller);
-                }, 380);
+                if (position >= 9) {
+                    RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(mList.getContext()) {
+                        @Override protected int getVerticalSnapPreference() { return LinearSmoothScroller.SNAP_TO_START; }
+                    };
+                    smoothScroller.setTargetPosition(position);
+                    View v = getView();
+                    if (v != null) v.postDelayed(() -> mList.getLayoutManager().startSmoothScroll(smoothScroller), 380);
+                }
             }
         }
     }
 
     public void saveSharedPrefs() {
-        if (getView() == null) return;
-        ArrayList<View> nViews = Helpers.getChildViewsRecursive(getView().findViewById(R.id.container), false);
-        for (View nView : nViews)
-            if (nView != null) try {
-                if (nView.getTag() != null)
+        View v = getView();
+        if (v == null) return;
+        ArrayList<View> nViews = Helpers.getChildViewsRecursive(v.findViewById(R.id.container), false);
+        for (View nView : nViews) {
+            if (nView != null && nView.getTag() instanceof String) {
+                String tag = (String) nView.getTag();
+                try {
                     if (nView instanceof TextView)
-                        AppHelper.appPrefs.edit().putString((String)nView.getTag(), ((TextView)nView).getText().toString()).apply();
+                        AppHelper.appPrefs.edit().putString(tag, ((TextView)nView).getText().toString()).apply();
                     else if (nView instanceof SpinnerExFake) {
-                        AppHelper.appPrefs.edit().putString((String)nView.getTag(), ((SpinnerExFake)nView).getValue()).apply();
+                        AppHelper.appPrefs.edit().putString(tag, ((SpinnerExFake)nView).getValue()).apply();
                         ((SpinnerExFake)nView).applyOthers();
                     } else if (nView instanceof SpinnerEx)
-                        AppHelper.appPrefs.edit().putInt((String)nView.getTag(), ((SpinnerEx)nView).getSelectedArrayValue()).apply();
-            } catch (Throwable e) {
+                        AppHelper.appPrefs.edit().putInt(tag, ((SpinnerEx)nView).getSelectedArrayValue()).apply();
+                } catch (Exception ignored) {}
             }
+        }
     }
 
     public void loadSharedPrefs() {
-        if (getView() == null) return;
-        ArrayList<View> nViews = Helpers.getChildViewsRecursive(getView().findViewById(R.id.container), false);
-        for (View nView: nViews)
-            if (nView != null) try {
-                if (nView.getTag() != null)
-                    if (nView instanceof TextView) {
-                        ((TextView)nView).setText(AppHelper.getStringOfAppPrefs((String)nView.getTag(), ""));
-                    }
-            } catch (Throwable e) {
+        View v = getView();
+        if (v == null) return;
+        ArrayList<View> nViews = Helpers.getChildViewsRecursive(v.findViewById(R.id.container), false);
+        for (View nView: nViews) {
+            if (nView != null && nView.getTag() instanceof String) {
+                if (nView instanceof TextView) {
+                    ((TextView)nView).setText(AppHelper.getStringOfAppPrefs((String)nView.getTag(), ""));
+                }
             }
-    }
-
-    public Preference.OnPreferenceClickListener openAppsEdit = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openApps(preference.getKey());
-            return true;
         }
-    };
-
-    public Preference.OnPreferenceClickListener openAppsBWEdit = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openAppsBW(preference.getKey());
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openShareEdit = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openShare(preference.getKey());
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openOpenWithEdit = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openOpenWith(preference.getKey());
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openLauncherActions = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openMultiAction(preference, MultiAction.Actions.LAUNCHER);
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openNavbarActions = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openMultiAction(preference, MultiAction.Actions.NAVBAR);
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openStatusbarActions = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openMultiAction(preference, MultiAction.Actions.STATUSBAR);
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openLockScreenActions = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openMultiAction(preference, MultiAction.Actions.LOCKSCREEN);
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openLaunchActions = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            openMultiAction(preference, MultiAction.Actions.LAUNCH);
-            return true;
-        }
-    };
-
-    public Preference.OnPreferenceClickListener openActivitiesList = new Preference.OnPreferenceClickListener() {
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            if (!Helpers.checkPermAndRequest((AppCompatActivity) getActivity(), Helpers.ACCESS_SECURITY_CENTER, Helpers.REQUEST_PERMISSIONS_SECURITY_CENTER)) return false;
-            openActivitiesItemList(preference);
-            return true;
-        }
-    };
-
-    void openApps(String key) {
-        Bundle args = new Bundle();
-        args.putString("key", key);
-        args.putBoolean("multi", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(this, 0);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_apps, R.layout.prefs_app_selector);
-    }
-
-    void openAppsBW(String key) {
-        Bundle args = new Bundle();
-        args.putString("key", key);
-        args.putBoolean("multi", true);
-        args.putBoolean("bw", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(this, 0);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_apps, R.layout.prefs_app_selector);
-    }
-
-    void openShare(String key) {
-        Bundle args = new Bundle();
-        args.putString("key", key);
-        args.putBoolean("multi", true);
-        args.putBoolean("share", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(this, 0);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_apps, R.layout.prefs_app_selector);
-    }
-
-    void openOpenWith(String key) {
-        Bundle args = new Bundle();
-        args.putString("key", key);
-        args.putBoolean("multi", true);
-        args.putBoolean("openwith", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(this, 0);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_apps, R.layout.prefs_app_selector);
-    }
-
-    void openMultiAction(Preference pref, MultiAction.Actions actions) {
-        Bundle args = new Bundle();
-        args.putString("key", pref.getKey());
-        args.putInt("actions", actions.ordinal());
-        openSubFragment(new MultiAction(), args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.Edit, pref.getTitle().toString(), R.layout.prefs_multiaction);
-    }
-
-    public void openStandaloneApp(Preference pref, Fragment targetFrag, int resultId) {
-        Bundle args = new Bundle();
-        args.putString("key", pref.getKey());
-        args.putBoolean("standalone", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(targetFrag, resultId);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_app, R.layout.prefs_app_selector);
-    }
-
-    public void openPrivacyAppEdit(Fragment targetFrag, int resultId) {
-        Bundle args = new Bundle();
-        args.putBoolean("privacy", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(targetFrag, resultId);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_apps, R.layout.prefs_app_selector);
-    }
-
-    public void openLockedAppEdit(Fragment targetFrag, int resultId) {
-        Bundle args = new Bundle();
-        args.putBoolean("applock", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(targetFrag, resultId);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.select_apps, R.layout.prefs_app_selector);
-    }
-
-    public void openLaunchableList(Preference pref, Fragment targetFrag, int resultId) {
-        Bundle args = new Bundle();
-        args.putString("key", pref.getKey());
-        args.putBoolean("custom_titles", true);
-        AppSelector appSelector = new AppSelector();
-        appSelector.setTargetFragment(targetFrag, resultId);
-        openSubFragment(appSelector, args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, R.string.launcher_renameapps_list_title, R.layout.prefs_app_selector);
-    }
-
-    public void openActivitiesItemList(Preference pref) {
-        Bundle args = new Bundle();
-        args.putBoolean("activities", true);
-        args.putString("key", pref.getKey());
-        args.putString("titleResId", pref.getTitle().toString());
-        openSubFragment(new SortableList(), args, AppHelper.SettingsType.Edit, AppHelper.ActionBarType.HomeUp, pref.getTitle().toString(), R.layout.prefs_sortable_list);
     }
 
     public void selectSub() {
         if (isStandalone) return;
         PreferenceScreen screen = getPreferenceScreen();
-        if (screen == null) return;
+        if (screen == null || sub.isEmpty()) return;
         
-        int cnt = screen.getPreferenceCount();
-        for (int i = cnt - 1; i >= 0; i--) {
+        for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
             Preference pref = screen.getPreference(i);
-            if (pref == null) continue;
-            
-            String key = pref.getKey();
-            if (key != null && !key.equals(sub)) {
+            if (pref != null && pref.getKey() != null && !pref.getKey().equals(sub)) {
                 screen.removePreference(pref);
             }
         }
@@ -383,10 +210,10 @@ public class SubFragment extends PreferenceFragmentBase {
         if (act != null) {
             Helpers.hideKeyboard(act, getView());
             FragmentManager fragmentManager = getParentFragmentManager();
-            if (fragmentManager == null || !isResumed()) {
-                act.getSupportFragmentManager().popBackStack();
-            } else {
+            if (fragmentManager != null && isResumed()) {
                 fragmentManager.popBackStackImmediate();
+            } else {
+                act.getSupportFragmentManager().popBackStack();
             }
         }
     }
