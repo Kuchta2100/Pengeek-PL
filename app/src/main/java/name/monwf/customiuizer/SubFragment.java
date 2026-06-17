@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.recyclerview.widget.LinearSmoothScroller;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -30,8 +28,6 @@ public class SubFragment extends PreferenceFragmentBase {
     protected String sub = "";
     protected Bundle catInfo = null;
     protected boolean isStandalone = false;
-    private boolean localIsCustomActionBar = false;
-    private boolean localToolbarMenu = false;
     
     private float order = 100.0f;
     private String highlightKey = null;
@@ -54,9 +50,6 @@ public class SubFragment extends PreferenceFragmentBase {
             highlightKey = args.getString("mod");
         }
         
-        localIsCustomActionBar = (abType == AppHelper.ActionBarType.Edit);
-        localToolbarMenu = localToolbarMenu || localIsCustomActionBar;
-
         if (contentResId == 0) {
             if (getActivity() != null) getActivity().finish();
             return;
@@ -75,24 +68,28 @@ public class SubFragment extends PreferenceFragmentBase {
         if (settingsType == AppHelper.SettingsType.Edit) {
             loadSharedPrefs();
         }
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
-            if (isStandalone && catInfo != null && catInfo.getBoolean("isDynamic")) {
-                actionBar.setTitle(settingTitle + " ⟲");
-            } else if (!isStandalone && !sub.isEmpty()) {
-                PreferenceScreen screen = getPreferenceScreen();
-                if (screen != null && screen.getPreferenceCount() > 0) {
-                    Preference pref0 = screen.getPreference(0);
-                    if (pref0 != null && pref0.getTitle() != null) {
-                        actionBar.setTitle(pref0.getTitle());
+        
+        // Poprawka: użycie poprawnego rzutowania na AppCompatActivity
+        if (getActivity() instanceof AppCompatActivity) {
+            ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+            if (actionBar != null) {
+                if (isStandalone && catInfo != null && catInfo.getBoolean("isDynamic")) {
+                    actionBar.setTitle(settingTitle + " ⟲");
+                } else if (!isStandalone && !sub.isEmpty()) {
+                    PreferenceScreen screen = getPreferenceScreen();
+                    if (screen != null && screen.getPreferenceCount() > 0) {
+                        Preference pref0 = screen.getPreference(0);
+                        if (pref0 != null && pref0.getTitle() != null) {
+                            actionBar.setTitle(pref0.getTitle());
+                        } else {
+                            actionBar.setTitle(settingTitle);
+                        }
                     } else {
                         actionBar.setTitle(settingTitle);
                     }
                 } else {
                     actionBar.setTitle(settingTitle);
                 }
-            } else {
-                actionBar.setTitle(settingTitle);
             }
         }
     }
