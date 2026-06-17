@@ -86,7 +86,7 @@ public class SubFragment extends PreferenceFragmentBase {
                 PreferenceScreen screen = getPreferenceScreen();
                 if (screen != null && screen.getPreferenceCount() > 0) {
                     Preference pref0 = screen.getPreference(0);
-                    if (pref0 != null && pref0.getTitle() != null) {
+                    if (pref0 != null) {
                         actionBar.setTitle(pref0.getTitle());
                     }
                 }
