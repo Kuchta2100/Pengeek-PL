@@ -1,6 +1,6 @@
 ## Pengeek
 
-Mój fork dodaje język polski do oryginalnego projektu.
+Mój fork dodaje język polski do oryginalnego projektu. Naprawiłem też problem z nieprawidłowym wyświetlaniem paska zadań.
 
 Dostosuj swój HyperOS do swoich upodobań.
 
