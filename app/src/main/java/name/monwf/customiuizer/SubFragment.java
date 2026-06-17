@@ -47,20 +47,18 @@ public class SubFragment extends PreferenceFragmentBase {
     public void onCreate(Bundle savedInstanceState) {
         Bundle args = getArguments();
         if (args != null) {
-            settingsType = AppHelper.SettingsType.values()[args.getInt("settingsType")];
-            abType = AppHelper.ActionBarType.values()[args.getInt("abType")];
-            contentResId = args.getInt("contentResId");
+            settingsType = AppHelper.SettingsType.values()[args.getInt("settingsType", 0)];
+            abType = AppHelper.ActionBarType.values()[args.getInt("abType", 0)];
+            contentResId = args.getInt("contentResId", 0);
             settingTitle = args.getString("titleResId", "");
-            order = args.getFloat("order") + 10.0f;
+            order = args.getFloat("order", 90.0f) + 10.0f;
             catInfo = args.getBundle("catInfo");
             sub = args.getString("sub", "");
-            isStandalone = args.getBoolean("isStandalone");
+            isStandalone = args.getBoolean("isStandalone", false);
             highlightKey = args.getString("mod");
         }
         
-        if (abType == AppHelper.ActionBarType.Edit) {
-            isCustomActionBar = true;
-        }
+        isCustomActionBar = (abType == AppHelper.ActionBarType.Edit);
         toolbarMenu = toolbarMenu || isCustomActionBar;
 
         if (contentResId == 0) {
