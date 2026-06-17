@@ -86,12 +86,8 @@ public class SubFragment extends PreferenceFragmentBase {
                 PreferenceScreen screen = getPreferenceScreen();
                 if (screen != null && screen.getPreferenceCount() > 0) {
                     Preference pref0 = screen.getPreference(0);
-                    if (pref0 instanceof PreferenceCategoryEx) {
-                        PreferenceCategoryEx category = (PreferenceCategoryEx) pref0;
-                        if (category.isDynamic())
-                            actionBar.setTitle(category.getTitle() + " ⟲");
-                        else
-                            actionBar.setTitle(category.getTitle());
+                    if (pref0 != null && pref0.getTitle() != null) {
+                        actionBar.setTitle(pref0.getTitle());
                     }
                 }
             }
@@ -369,11 +365,6 @@ public class SubFragment extends PreferenceFragmentBase {
             
             if (!pref.getKey().equals(sub)) {
                 screen.removePreference(pref);
-            } else {
-                ActionBar actionBar = getActionBar();
-                if (actionBar != null && pref.getTitle() != null) {
-                    actionBar.setTitle(pref.getTitle());
-                }
             }
         }
     }
