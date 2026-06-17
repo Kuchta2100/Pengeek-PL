@@ -95,7 +95,8 @@
         </style>
         <style name="AppTextAppearance.Secondary" parent="TextAppearance.AppCompat.Display1">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
-                <item name="android:textStyle">normal</style>
+                <item name="android:textStyle">normal</item>
+        </style>
 
         <style name="AppPreferenceCategory" parent="PreferenceCategoryTitleTextStyle">
                 <item name="android:textSize">@dimen/preference_category_text_size</item>
