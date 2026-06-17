@@ -6,13 +6,14 @@
                 <item name="android:colorBackground">@color/color_window_background</item>
                 <item name="android:windowTranslucentStatus">true</item>
                 <item name="android:windowTranslucentNavigation">true</item>
-                <item name="android:windowLightStatusBar">true</item>
                 <item name="android:windowDisablePreview">true</item>
                 <item name="android:colorBackgroundCacheHint">@null</item>
                 <item name="android:spinnerStyle">@style/AppSpinnerStyle</item>
                 <item name="android:spinnerItemStyle">@style/DropDownItemStyle</item>
                 <item name="android:textAppearanceListItem">@style/AppTextAppearance.Primary</item>
                 <item name="android:textAppearanceListItemSecondary">@style/AppTextAppearance.Secondary</item>
+                <item name="android:textColorPrimary">@color/preference_primary_text_color</item>
+                <item name="android:textColorSecondary">@color/preference_secondary_text_color</item>
                 <item name="android:listPreferredItemPaddingLeft">@dimen/preference_item_child_padding</item>
                 <item name="android:listPreferredItemPaddingStart">@dimen/preference_item_child_padding</item>
                 <item name="colorAccent">@color/highlight_normal_light</item>
@@ -150,5 +151,8 @@
                 <item name="android:indeterminateDrawable">@drawable/progressbar_indeterminate</item>
                 <item name="android:minWidth">@dimen/progressbar_size</item>
                 <item name="android:minHeight">@dimen/progressbar_size</item>
+        </style>
+
+        <style name="AppTheme.ComposeHost" parent="AppTheme">
         </style>
 </resources>
