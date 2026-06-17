@@ -371,7 +371,8 @@ public class SubFragment extends PreferenceFragmentBase {
             Preference pref = screen.getPreference(i);
             if (pref == null) continue;
             
-            if (!pref.getKey().equals(sub)) {
+            String key = pref.getKey();
+            if (key != null && !key.equals(sub)) {
                 screen.removePreference(pref);
             }
         }
