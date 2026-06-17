@@ -30,7 +30,6 @@ public class SubFragment extends PreferenceFragmentBase {
     protected String sub = "";
     protected Bundle catInfo = null;
     protected boolean isStandalone = false;
-    // Te zmienne są wymagane przez Twoją klasę bazową, dlatego muszą tu być:
     protected boolean isCustomActionBar = false;
     protected boolean toolbarMenu = false;
     
@@ -184,7 +183,6 @@ public class SubFragment extends PreferenceFragmentBase {
         }
     }
 
-    @Override
     public void confirmEdit() {
         saveSharedPrefs();
         finish();
