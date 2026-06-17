@@ -86,9 +86,13 @@ public class SubFragment extends PreferenceFragmentBase {
                 PreferenceScreen screen = getPreferenceScreen();
                 if (screen != null && screen.getPreferenceCount() > 0) {
                     Preference pref0 = screen.getPreference(0);
-                    if (pref0 != null) {
+                    if (pref0 != null && pref0.getTitle() != null) {
                         actionBar.setTitle(pref0.getTitle());
+                    } else {
+                        actionBar.setTitle(settingTitle);
                     }
+                } else {
+                    actionBar.setTitle(settingTitle);
                 }
             }
             else {
@@ -116,13 +120,17 @@ public class SubFragment extends PreferenceFragmentBase {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        LayoutInflater crtInflator = inflater.cloneInContext(requireContext());
-        if (settingsType == AppHelper.SettingsType.Preference) {
-            return super.onCreateView(crtInflator, container, savedInstanceState);
+        try {
+            LayoutInflater crtInflator = inflater.cloneInContext(requireContext());
+            if (settingsType == AppHelper.SettingsType.Preference) {
+                return super.onCreateView(crtInflator, container, savedInstanceState);
+            }
+            View view = crtInflator.inflate(padded ? R.layout.prefs_common_padded : R.layout.prefs_common, container, false);
+            crtInflator.inflate(contentResId, (FrameLayout)view);
+            return view;
+        } catch (Exception e) {
+            return super.onCreateView(inflater, container, savedInstanceState);
         }
-        View view = crtInflator.inflate(padded ? R.layout.prefs_common_padded : R.layout.prefs_common, container, false);
-        crtInflator.inflate(contentResId, (FrameLayout)view);
-        return view;
     }
 
     @Override
@@ -136,24 +144,26 @@ public class SubFragment extends PreferenceFragmentBase {
         super.onStart();
         if (highlightKey != null) {
             RecyclerView mList = getListView();
-            int position = ((PreferenceGroup.PreferencePositionCallback) mList.getAdapter())
-                .getPreferenceAdapterPosition(highlightKey);
-            highlightKey = null;
-            if (position < 9) return;
-            RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(mList.getContext()) {
-                @Override protected int getVerticalSnapPreference() {
-                    return LinearSmoothScroller.SNAP_TO_START;
-                }
-            };
-            smoothScroller.setTargetPosition(position);
-            getView().postDelayed(() -> {
-                mList.getLayoutManager().startSmoothScroll(smoothScroller);
-            }, 380);
+            if (mList != null && mList.getAdapter() != null) {
+                int position = ((PreferenceGroup.PreferencePositionCallback) mList.getAdapter())
+                    .getPreferenceAdapterPosition(highlightKey);
+                highlightKey = null;
+                if (position < 9) return;
+                RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(mList.getContext()) {
+                    @Override protected int getVerticalSnapPreference() {
+                        return LinearSmoothScroller.SNAP_TO_START;
+                    }
+                };
+                smoothScroller.setTargetPosition(position);
+                getView().postDelayed(() -> {
+                    mList.getLayoutManager().startSmoothScroll(smoothScroller);
+                }, 380);
+            }
         }
     }
 
     public void saveSharedPrefs() {
-        if (getView() == null) Log.e("miuizer", "View not yet ready!");
+        if (getView() == null) return;
         ArrayList<View> nViews = Helpers.getChildViewsRecursive(getView().findViewById(R.id.container), false);
         for (View nView : nViews)
             if (nView != null) try {
@@ -166,12 +176,11 @@ public class SubFragment extends PreferenceFragmentBase {
                     } else if (nView instanceof SpinnerEx)
                         AppHelper.appPrefs.edit().putInt((String)nView.getTag(), ((SpinnerEx)nView).getSelectedArrayValue()).apply();
             } catch (Throwable e) {
-                Log.e("miuizer", "Cannot save sub preference!");
             }
     }
 
     public void loadSharedPrefs() {
-        if (getView() == null) Log.e("miuizer", "View not yet ready!");
+        if (getView() == null) return;
         ArrayList<View> nViews = Helpers.getChildViewsRecursive(getView().findViewById(R.id.container), false);
         for (View nView: nViews)
             if (nView != null) try {
@@ -180,7 +189,6 @@ public class SubFragment extends PreferenceFragmentBase {
                         ((TextView)nView).setText(AppHelper.getStringOfAppPrefs((String)nView.getTag(), ""));
                     }
             } catch (Throwable e) {
-                Log.e("miuizer", "Cannot load sub preference!");
             }
     }
 
@@ -371,12 +379,14 @@ public class SubFragment extends PreferenceFragmentBase {
 
     public void finish() {
         AppCompatActivity act = (AppCompatActivity) getActivity();
-        Helpers.hideKeyboard(act, getView());
-        FragmentManager fragmentManager = getParentFragmentManager();
-        if (fragmentManager == null || !isResumed()) {
-            if (act != null) act.getSupportFragmentManager().popBackStack();
-        } else {
-            fragmentManager.popBackStackImmediate();
+        if (act != null) {
+            Helpers.hideKeyboard(act, getView());
+            FragmentManager fragmentManager = getParentFragmentManager();
+            if (fragmentManager == null || !isResumed()) {
+                act.getSupportFragmentManager().popBackStack();
+            } else {
+                fragmentManager.popBackStackImmediate();
+            }
         }
     }
 
