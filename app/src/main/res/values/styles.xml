@@ -82,6 +82,7 @@
 
         <style name="AppTextAppearance">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
+                <item name="android:textColor">?android:attr/textColorSecondary</item>
                 <item name="android:textColorHighlight">?android:attr/textColorHighlight</item>
                 <item name="android:textColorHint">?android:attr/textColorHint</item>
                 <item name="android:textColorLink">?android:attr/textColorLink</item>
