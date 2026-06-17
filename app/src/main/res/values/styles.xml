@@ -22,7 +22,6 @@
                 <item name="dialogTheme">@style/AppDialogStyle</item>
                 <item name="alertDialogTheme">@style/AppDialogStyle</item>
                 <item name="preferenceTheme">@style/AppPreferenceTheme</item>
-                <item name="seekBarPreferenceStyle">@style/AppSeekBarPreference</item>
                 <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
         </style>
         <style name="AppSpinnerStyle" parent="@style/Widget.AppCompat.Spinner.DropDown">
@@ -48,6 +47,7 @@
 
         <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay.v14.Material">
                 <item name="preferenceFragmentCompatStyle">@style/AppPreferenceFragmentCompatStyle</item>
+                <item name="seekBarPreferenceStyle">@style/AppSeekBarPreference</item>
         </style>
         <style name="AppPreferenceFragmentCompatStyle" parent="@style/PreferenceFragment.Material">
                 <item name="android:layout">@layout/prefs_fragment_base</item>
@@ -95,8 +95,7 @@
         </style>
         <style name="AppTextAppearance.Secondary" parent="TextAppearance.AppCompat.Display1">
                 <item name="android:textSize">@dimen/secondary_text_size</item>
-                <item name="android:textStyle">normal</item>
-        </style>
+                <item name="android:textStyle">normal</style>
 
         <style name="AppPreferenceCategory" parent="PreferenceCategoryTitleTextStyle">
                 <item name="android:textSize">@dimen/preference_category_text_size</item>
@@ -164,6 +163,7 @@
         </style>
 
         <style name="SeekBarThemeOverlay">
+                <item name="android:textColorSecondary">@color/preference_category_text_color</item>
                 <item name="android:textAppearanceListItemSecondary">@style/SeekBarValueTextAppearance</item>
         </style>
 
