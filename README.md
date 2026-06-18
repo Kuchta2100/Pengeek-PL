@@ -5,14 +5,16 @@ Mój fork dodaje język polski do oryginalnego projektu. Naprawiłem też proble
 Dostosuj swój HyperOS do swoich upodobań.
 
 ## Wersje testowe
-* [Kanał Telegram](https://t.me/pengeek)
-* [jiandaoyun](https://rz3kv5wa4g.jiandaoyun.com/dash/650e43a383027ec3225083e9)
 
 * [Dysk Google - polska wersja](https://drive.google.com/file/d/16T9D_eGAnPJBkcTnS5i7_B9xDTGsJj64/view?usp=drivesdk)
 
+* [Kanał Telegram](https://t.me/pengeek)
+* [jiandaoyun](https://rz3kv5wa4g.jiandaoyun.com/dash/650e43a383027ec3225083e9)
 
 
-### Przekaż darowiznę
+
+
+### Wesprzyj mnie
 * [Poprzez pomagam.pl](https://pomagam.pl/ahkhwy)
 
 ## Oto główne funkcje:
