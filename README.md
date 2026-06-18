@@ -13,7 +13,7 @@ Dostosuj swój HyperOS do swoich upodobań.
 
 
 ### Przekaż darowiznę
-* [Inne](https://pomagam.pl/)
+* [Poprzez pomagam.pl](https://pomagam.pl/ahkhwy)
 
 ## Oto główne funkcje:
 * Utrzymywanie odblokowanego telefonu w zaufanym  Środowisko (Bluetooth i Wi-Fi)
